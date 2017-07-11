@@ -41,6 +41,9 @@ public interface IpAddressService {
   @POST("ipAddress/{id}?action=activate")
   Call<IpAddress> activate(@Path("id") String id);
   
+  @POST("ipAddress/{id}?action=associate")
+  Call<IpAddress> associate(@Path("id") String id);
+  
   @POST("ipAddress/{id}?action=deactivate")
   Call<IpAddress> deactivate(@Path("id") String id);
   

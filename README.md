@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-        compile 'com.github.Joni-Lover:rancher-java-sdk:master-SNAPSHOT'
+        compile 'com.github.Joni-Lover:rancher-java-sdk:2.0.0'
 }
 ```
 
@@ -30,7 +30,7 @@ You must first create an API key in your Rancher installation for this library t
 First, initialize your Rancher client:
 
 ```java
-Rancher.Config config = new Rancher.Config(new URL("https://rancher.mydomain.com/v1/"), "MyAPIAccessKey", "MyAPISecretKey");
+Rancher.Config config = new Rancher.Config(new URL("https://rancher.mydomain.com/v2-beta/"), "MyAPIAccessKey", "MyAPISecretKey");
 Rancher rancher = new Rancher(config);
 ```
 

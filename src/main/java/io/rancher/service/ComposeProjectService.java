@@ -4,8 +4,10 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.ComposeProject;
 import io.rancher.type.Account;
-import io.rancher.type.Environment;
 import io.rancher.type.Service;
+import io.rancher.type.Stack;
+import io.rancher.type.Volume;
+import io.rancher.type.VolumeTemplate;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -38,23 +40,20 @@ public interface ComposeProjectService {
   @DELETE("composeProject/{id}")
   Call<Response> delete(@Path("id") String id);
   
-  @POST("composeProject/{id}?action=cancelrollback")
-  Call<Environment> cancelrollback(@Path("id") String id);
-  
   @POST("composeProject/{id}?action=cancelupgrade")
-  Call<Environment> cancelupgrade(@Path("id") String id);
+  Call<Stack> cancelupgrade(@Path("id") String id);
   
   @POST("composeProject/{id}?action=error")
-  Call<Environment> error(@Path("id") String id);
+  Call<Stack> error(@Path("id") String id);
   
   @POST("composeProject/{id}?action=finishupgrade")
-  Call<Environment> finishupgrade(@Path("id") String id);
+  Call<Stack> finishupgrade(@Path("id") String id);
   
   @POST("composeProject/{id}?action=remove")
-  Call<Environment> remove(@Path("id") String id);
+  Call<Stack> remove(@Path("id") String id);
   
   @POST("composeProject/{id}?action=rollback")
-  Call<Environment> rollback(@Path("id") String id);
+  Call<Stack> rollback(@Path("id") String id);
   
 
   
@@ -63,5 +62,11 @@ public interface ComposeProjectService {
   
   @GET
   Call<TypeCollection<Service>> getLinkServices(@Url String url );
+  
+  @GET
+  Call<TypeCollection<VolumeTemplate>> getLinkVolumeTemplates(@Url String url );
+  
+  @GET
+  Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );
   
 }

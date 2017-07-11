@@ -4,6 +4,7 @@ import java.util.Map;
 
 import io.rancher.base.AbstractType;
 import java.util.List;
+import java.util.Map;
 
 public class ComposeService extends AbstractType {
 
@@ -21,12 +22,28 @@ public class ComposeService extends AbstractType {
         return this.links.get("account");
     }
     
-    public String getEnvironmentLink() {
-        return this.links.get("environment");
-    }
-    
     public String getInstancesLink() {
         return this.links.get("instances");
+    }
+    
+    public String getNetworkDriversLink() {
+        return this.links.get("networkDrivers");
+    }
+    
+    public String getServiceExposeMapsLink() {
+        return this.links.get("serviceExposeMaps");
+    }
+    
+    public String getServiceLogsLink() {
+        return this.links.get("serviceLogs");
+    }
+    
+    public String getStackLink() {
+        return this.links.get("stack");
+    }
+    
+    public String getStorageDriversLink() {
+        return this.links.get("storageDrivers");
     }
     
 
@@ -39,17 +56,19 @@ public class ComposeService extends AbstractType {
     
     private String description;
     
-    private String environmentId;
-    
     private String externalId;
     
     private String fqdn;
     
     private String healthState;
     
+    private List<String> instanceIds;
+    
     private String kind;
     
     private LaunchConfig launchConfig;
+    
+    private Map<String, Object> linkedServices;
     
     private String name;
     
@@ -65,9 +84,13 @@ public class ComposeService extends AbstractType {
     
     private String selectorLink;
     
+    private String stackId;
+    
     private Boolean startOnCreate;
     
     private String state;
+    
+    private Boolean system;
     
     private String transitioning;
     
@@ -111,14 +134,6 @@ public class ComposeService extends AbstractType {
       this.description = description;
     }
     
-    public String getEnvironmentId() {
-        return this.environmentId;
-    }
-
-    public void setEnvironmentId(String environmentId) {
-      this.environmentId = environmentId;
-    }
-    
     public String getExternalId() {
         return this.externalId;
     }
@@ -143,6 +158,14 @@ public class ComposeService extends AbstractType {
       this.healthState = healthState;
     }
     
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public void setInstanceIds(List<String> instanceIds) {
+      this.instanceIds = instanceIds;
+    }
+    
     public String getKind() {
         return this.kind;
     }
@@ -157,6 +180,14 @@ public class ComposeService extends AbstractType {
 
     public void setLaunchConfig(LaunchConfig launchConfig) {
       this.launchConfig = launchConfig;
+    }
+    
+    public Map<String, Object> getLinkedServices() {
+        return this.linkedServices;
+    }
+
+    public void setLinkedServices(Map<String, Object> linkedServices) {
+      this.linkedServices = linkedServices;
     }
     
     public String getName() {
@@ -215,6 +246,14 @@ public class ComposeService extends AbstractType {
       this.selectorLink = selectorLink;
     }
     
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public void setStackId(String stackId) {
+      this.stackId = stackId;
+    }
+    
     public Boolean getStartOnCreate() {
         return this.startOnCreate;
     }
@@ -229,6 +268,14 @@ public class ComposeService extends AbstractType {
 
     public void setState(String state) {
       this.state = state;
+    }
+    
+    public Boolean getSystem() {
+        return this.system;
+    }
+
+    public void setSystem(Boolean system) {
+      this.system = system;
     }
     
     public String getTransitioning() {

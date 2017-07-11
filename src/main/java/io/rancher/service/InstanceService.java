@@ -5,14 +5,19 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.Instance;
 import io.rancher.type.Account;
 import io.rancher.type.Credential;
+import io.rancher.type.HealthcheckInstanceHostMap;
 import io.rancher.type.Host;
 import io.rancher.type.Instance;
 import io.rancher.type.InstanceConsole;
 import io.rancher.type.InstanceConsoleInput;
+import io.rancher.type.InstanceLink;
 import io.rancher.type.InstanceStop;
 import io.rancher.type.Mount;
 import io.rancher.type.Port;
 import io.rancher.type.Service;
+import io.rancher.type.ServiceEvent;
+import io.rancher.type.ServiceExposeMap;
+import io.rancher.type.ServiceLog;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
@@ -97,7 +102,13 @@ public interface InstanceService {
   Call<TypeCollection<Credential>> getLinkCredentials(@Url String url );
   
   @GET
+  Call<TypeCollection<HealthcheckInstanceHostMap>> getLinkHealthcheckInstanceHostMaps(@Url String url );
+  
+  @GET
   Call<TypeCollection<Host>> getLinkHosts(@Url String url );
+  
+  @GET
+  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url );
   
   @GET
   Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
@@ -107,6 +118,15 @@ public interface InstanceService {
   
   @GET
   Call<TypeCollection<Port>> getLinkPorts(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceEvent>> getLinkServiceEvents(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
   
   @GET
   Call<TypeCollection<Service>> getLinkServices(@Url String url );

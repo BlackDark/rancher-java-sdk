@@ -24,6 +24,10 @@ public class Image extends AbstractType {
         return this.links.get("instances");
     }
     
+    public String getStoragePoolsLink() {
+        return this.links.get("storagePools");
+    }
+    
     public String getVolumesLink() {
         return this.links.get("volumes");
     }

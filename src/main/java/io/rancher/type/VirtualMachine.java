@@ -26,8 +26,16 @@ public class VirtualMachine extends AbstractType {
         return this.links.get("credentials");
     }
     
+    public String getHealthcheckInstanceHostMapsLink() {
+        return this.links.get("healthcheckInstanceHostMaps");
+    }
+    
     public String getHostsLink() {
         return this.links.get("hosts");
+    }
+    
+    public String getInstanceLinksLink() {
+        return this.links.get("instanceLinks");
     }
     
     public String getInstancesLink() {
@@ -40,6 +48,22 @@ public class VirtualMachine extends AbstractType {
     
     public String getPortsLink() {
         return this.links.get("ports");
+    }
+    
+    public String getRegistryCredentialLink() {
+        return this.links.get("registryCredential");
+    }
+    
+    public String getServiceEventsLink() {
+        return this.links.get("serviceEvents");
+    }
+    
+    public String getServiceExposeMapsLink() {
+        return this.links.get("serviceExposeMaps");
+    }
+    
+    public String getServiceLogsLink() {
+        return this.links.get("serviceLogs");
     }
     
     public String getServicesLink() {
@@ -56,11 +80,25 @@ public class VirtualMachine extends AbstractType {
     
     private Map<String, Object> blkioDeviceOptions;
     
+    private Integer blkioWeight;
+    
+    private String cgroupParent;
+    
     private List<String> command;
     
     private Integer count;
     
+    private Integer cpuCount;
+    
+    private Integer cpuPercent;
+    
+    private Integer cpuPeriod;
+    
+    private Integer cpuQuota;
+    
     private String cpuSet;
+    
+    private String cpuSetMems;
     
     private Integer cpuShares;
     
@@ -72,9 +110,13 @@ public class VirtualMachine extends AbstractType {
     
     private String description;
     
+    private Integer diskQuota;
+    
     private List<VirtualMachineDisk> disks;
     
     private List<String> dns;
+    
+    private List<String> dnsOpt;
     
     private List<String> dnsSearch;
     
@@ -88,9 +130,19 @@ public class VirtualMachine extends AbstractType {
     
     private String firstRunning;
     
+    private List<String> groupAdd;
+    
     private InstanceHealthCheck healthCheck;
     
+    private List<String> healthCmd;
+    
+    private Integer healthInterval;
+    
+    private Integer healthRetries;
+    
     private String healthState;
+    
+    private Integer healthTimeout;
     
     private String hostId;
     
@@ -99,6 +151,22 @@ public class VirtualMachine extends AbstractType {
     private String imageUuid;
     
     private Map<String, Object> instanceLinks;
+    
+    private String instanceTriggeredStop;
+    
+    private Integer ioMaximumBandwidth;
+    
+    private Integer ioMaximumIOps;
+    
+    private String ip;
+    
+    private String ip6;
+    
+    private String ipcMode;
+    
+    private String isolation;
+    
+    private Integer kernelMemory;
     
     private String kind;
     
@@ -110,19 +178,37 @@ public class VirtualMachine extends AbstractType {
     
     private Integer memoryMb;
     
+    private Integer memoryReservation;
+    
     private Integer memorySwap;
+    
+    private Integer memorySwappiness;
+    
+    private Integer milliCpuReservation;
+    
+    private List<MountEntry> mounts;
     
     private String name;
     
     private Boolean nativeContainer;
     
+    private List<String> netAlias;
+    
     private List<String> networkIds;
     
     private String networkMode;
     
+    private Boolean oomKillDisable;
+    
+    private Integer oomScoreAdj;
+    
+    private Integer pidsLimit;
+    
     private List<String> ports;
     
     private String primaryIpAddress;
+    
+    private String primaryNetworkId;
     
     private String registryCredentialId;
     
@@ -134,13 +220,25 @@ public class VirtualMachine extends AbstractType {
     
     private List<String> securityOpt;
     
+    private List<String> serviceIds;
+    
+    private Integer shmSize;
+    
     private Integer startCount;
     
     private Boolean startOnCreate;
     
     private String state;
     
-    private String systemContainer;
+    private String stopSignal;
+    
+    private Map<String, Object> storageOpt;
+    
+    private Map<String, Object> sysctls;
+    
+    private Boolean system;
+    
+    private Map<String, Object> tmpfs;
     
     private String transitioning;
     
@@ -148,7 +246,13 @@ public class VirtualMachine extends AbstractType {
     
     private Integer transitioningProgress;
     
+    private List<Ulimit> ulimits;
+    
     private String userdata;
+    
+    private String usernsMode;
+    
+    private String uts;
     
     private String uuid;
     
@@ -174,6 +278,22 @@ public class VirtualMachine extends AbstractType {
       this.blkioDeviceOptions = blkioDeviceOptions;
     }
     
+    public Integer getBlkioWeight() {
+        return this.blkioWeight;
+    }
+
+    public void setBlkioWeight(Integer blkioWeight) {
+      this.blkioWeight = blkioWeight;
+    }
+    
+    public String getCgroupParent() {
+        return this.cgroupParent;
+    }
+
+    public void setCgroupParent(String cgroupParent) {
+      this.cgroupParent = cgroupParent;
+    }
+    
     public List<String> getCommand() {
         return this.command;
     }
@@ -190,12 +310,52 @@ public class VirtualMachine extends AbstractType {
       this.count = count;
     }
     
+    public Integer getCpuCount() {
+        return this.cpuCount;
+    }
+
+    public void setCpuCount(Integer cpuCount) {
+      this.cpuCount = cpuCount;
+    }
+    
+    public Integer getCpuPercent() {
+        return this.cpuPercent;
+    }
+
+    public void setCpuPercent(Integer cpuPercent) {
+      this.cpuPercent = cpuPercent;
+    }
+    
+    public Integer getCpuPeriod() {
+        return this.cpuPeriod;
+    }
+
+    public void setCpuPeriod(Integer cpuPeriod) {
+      this.cpuPeriod = cpuPeriod;
+    }
+    
+    public Integer getCpuQuota() {
+        return this.cpuQuota;
+    }
+
+    public void setCpuQuota(Integer cpuQuota) {
+      this.cpuQuota = cpuQuota;
+    }
+    
     public String getCpuSet() {
         return this.cpuSet;
     }
 
     public void setCpuSet(String cpuSet) {
       this.cpuSet = cpuSet;
+    }
+    
+    public String getCpuSetMems() {
+        return this.cpuSetMems;
+    }
+
+    public void setCpuSetMems(String cpuSetMems) {
+      this.cpuSetMems = cpuSetMems;
     }
     
     public Integer getCpuShares() {
@@ -238,6 +398,14 @@ public class VirtualMachine extends AbstractType {
       this.description = description;
     }
     
+    public Integer getDiskQuota() {
+        return this.diskQuota;
+    }
+
+    public void setDiskQuota(Integer diskQuota) {
+      this.diskQuota = diskQuota;
+    }
+    
     public List<VirtualMachineDisk> getDisks() {
         return this.disks;
     }
@@ -252,6 +420,14 @@ public class VirtualMachine extends AbstractType {
 
     public void setDns(List<String> dns) {
       this.dns = dns;
+    }
+    
+    public List<String> getDnsOpt() {
+        return this.dnsOpt;
+    }
+
+    public void setDnsOpt(List<String> dnsOpt) {
+      this.dnsOpt = dnsOpt;
     }
     
     public List<String> getDnsSearch() {
@@ -302,6 +478,14 @@ public class VirtualMachine extends AbstractType {
       this.firstRunning = firstRunning;
     }
     
+    public List<String> getGroupAdd() {
+        return this.groupAdd;
+    }
+
+    public void setGroupAdd(List<String> groupAdd) {
+      this.groupAdd = groupAdd;
+    }
+    
     public InstanceHealthCheck getHealthCheck() {
         return this.healthCheck;
     }
@@ -310,12 +494,44 @@ public class VirtualMachine extends AbstractType {
       this.healthCheck = healthCheck;
     }
     
+    public List<String> getHealthCmd() {
+        return this.healthCmd;
+    }
+
+    public void setHealthCmd(List<String> healthCmd) {
+      this.healthCmd = healthCmd;
+    }
+    
+    public Integer getHealthInterval() {
+        return this.healthInterval;
+    }
+
+    public void setHealthInterval(Integer healthInterval) {
+      this.healthInterval = healthInterval;
+    }
+    
+    public Integer getHealthRetries() {
+        return this.healthRetries;
+    }
+
+    public void setHealthRetries(Integer healthRetries) {
+      this.healthRetries = healthRetries;
+    }
+    
     public String getHealthState() {
         return this.healthState;
     }
 
     public void setHealthState(String healthState) {
       this.healthState = healthState;
+    }
+    
+    public Integer getHealthTimeout() {
+        return this.healthTimeout;
+    }
+
+    public void setHealthTimeout(Integer healthTimeout) {
+      this.healthTimeout = healthTimeout;
     }
     
     public String getHostId() {
@@ -348,6 +564,70 @@ public class VirtualMachine extends AbstractType {
 
     public void setInstanceLinks(Map<String, Object> instanceLinks) {
       this.instanceLinks = instanceLinks;
+    }
+    
+    public String getInstanceTriggeredStop() {
+        return this.instanceTriggeredStop;
+    }
+
+    public void setInstanceTriggeredStop(String instanceTriggeredStop) {
+      this.instanceTriggeredStop = instanceTriggeredStop;
+    }
+    
+    public Integer getIoMaximumBandwidth() {
+        return this.ioMaximumBandwidth;
+    }
+
+    public void setIoMaximumBandwidth(Integer ioMaximumBandwidth) {
+      this.ioMaximumBandwidth = ioMaximumBandwidth;
+    }
+    
+    public Integer getIoMaximumIOps() {
+        return this.ioMaximumIOps;
+    }
+
+    public void setIoMaximumIOps(Integer ioMaximumIOps) {
+      this.ioMaximumIOps = ioMaximumIOps;
+    }
+    
+    public String getIp() {
+        return this.ip;
+    }
+
+    public void setIp(String ip) {
+      this.ip = ip;
+    }
+    
+    public String getIp6() {
+        return this.ip6;
+    }
+
+    public void setIp6(String ip6) {
+      this.ip6 = ip6;
+    }
+    
+    public String getIpcMode() {
+        return this.ipcMode;
+    }
+
+    public void setIpcMode(String ipcMode) {
+      this.ipcMode = ipcMode;
+    }
+    
+    public String getIsolation() {
+        return this.isolation;
+    }
+
+    public void setIsolation(String isolation) {
+      this.isolation = isolation;
+    }
+    
+    public Integer getKernelMemory() {
+        return this.kernelMemory;
+    }
+
+    public void setKernelMemory(Integer kernelMemory) {
+      this.kernelMemory = kernelMemory;
     }
     
     public String getKind() {
@@ -390,12 +670,44 @@ public class VirtualMachine extends AbstractType {
       this.memoryMb = memoryMb;
     }
     
+    public Integer getMemoryReservation() {
+        return this.memoryReservation;
+    }
+
+    public void setMemoryReservation(Integer memoryReservation) {
+      this.memoryReservation = memoryReservation;
+    }
+    
     public Integer getMemorySwap() {
         return this.memorySwap;
     }
 
     public void setMemorySwap(Integer memorySwap) {
       this.memorySwap = memorySwap;
+    }
+    
+    public Integer getMemorySwappiness() {
+        return this.memorySwappiness;
+    }
+
+    public void setMemorySwappiness(Integer memorySwappiness) {
+      this.memorySwappiness = memorySwappiness;
+    }
+    
+    public Integer getMilliCpuReservation() {
+        return this.milliCpuReservation;
+    }
+
+    public void setMilliCpuReservation(Integer milliCpuReservation) {
+      this.milliCpuReservation = milliCpuReservation;
+    }
+    
+    public List<MountEntry> getMounts() {
+        return this.mounts;
+    }
+
+    public void setMounts(List<MountEntry> mounts) {
+      this.mounts = mounts;
     }
     
     public String getName() {
@@ -414,6 +726,14 @@ public class VirtualMachine extends AbstractType {
       this.nativeContainer = nativeContainer;
     }
     
+    public List<String> getNetAlias() {
+        return this.netAlias;
+    }
+
+    public void setNetAlias(List<String> netAlias) {
+      this.netAlias = netAlias;
+    }
+    
     public List<String> getNetworkIds() {
         return this.networkIds;
     }
@@ -430,6 +750,30 @@ public class VirtualMachine extends AbstractType {
       this.networkMode = networkMode;
     }
     
+    public Boolean getOomKillDisable() {
+        return this.oomKillDisable;
+    }
+
+    public void setOomKillDisable(Boolean oomKillDisable) {
+      this.oomKillDisable = oomKillDisable;
+    }
+    
+    public Integer getOomScoreAdj() {
+        return this.oomScoreAdj;
+    }
+
+    public void setOomScoreAdj(Integer oomScoreAdj) {
+      this.oomScoreAdj = oomScoreAdj;
+    }
+    
+    public Integer getPidsLimit() {
+        return this.pidsLimit;
+    }
+
+    public void setPidsLimit(Integer pidsLimit) {
+      this.pidsLimit = pidsLimit;
+    }
+    
     public List<String> getPorts() {
         return this.ports;
     }
@@ -444,6 +788,14 @@ public class VirtualMachine extends AbstractType {
 
     public void setPrimaryIpAddress(String primaryIpAddress) {
       this.primaryIpAddress = primaryIpAddress;
+    }
+    
+    public String getPrimaryNetworkId() {
+        return this.primaryNetworkId;
+    }
+
+    public void setPrimaryNetworkId(String primaryNetworkId) {
+      this.primaryNetworkId = primaryNetworkId;
     }
     
     public String getRegistryCredentialId() {
@@ -486,6 +838,22 @@ public class VirtualMachine extends AbstractType {
       this.securityOpt = securityOpt;
     }
     
+    public List<String> getServiceIds() {
+        return this.serviceIds;
+    }
+
+    public void setServiceIds(List<String> serviceIds) {
+      this.serviceIds = serviceIds;
+    }
+    
+    public Integer getShmSize() {
+        return this.shmSize;
+    }
+
+    public void setShmSize(Integer shmSize) {
+      this.shmSize = shmSize;
+    }
+    
     public Integer getStartCount() {
         return this.startCount;
     }
@@ -510,12 +878,44 @@ public class VirtualMachine extends AbstractType {
       this.state = state;
     }
     
-    public String getSystemContainer() {
-        return this.systemContainer;
+    public String getStopSignal() {
+        return this.stopSignal;
     }
 
-    public void setSystemContainer(String systemContainer) {
-      this.systemContainer = systemContainer;
+    public void setStopSignal(String stopSignal) {
+      this.stopSignal = stopSignal;
+    }
+    
+    public Map<String, Object> getStorageOpt() {
+        return this.storageOpt;
+    }
+
+    public void setStorageOpt(Map<String, Object> storageOpt) {
+      this.storageOpt = storageOpt;
+    }
+    
+    public Map<String, Object> getSysctls() {
+        return this.sysctls;
+    }
+
+    public void setSysctls(Map<String, Object> sysctls) {
+      this.sysctls = sysctls;
+    }
+    
+    public Boolean getSystem() {
+        return this.system;
+    }
+
+    public void setSystem(Boolean system) {
+      this.system = system;
+    }
+    
+    public Map<String, Object> getTmpfs() {
+        return this.tmpfs;
+    }
+
+    public void setTmpfs(Map<String, Object> tmpfs) {
+      this.tmpfs = tmpfs;
     }
     
     public String getTransitioning() {
@@ -542,12 +942,36 @@ public class VirtualMachine extends AbstractType {
       this.transitioningProgress = transitioningProgress;
     }
     
+    public List<Ulimit> getUlimits() {
+        return this.ulimits;
+    }
+
+    public void setUlimits(List<Ulimit> ulimits) {
+      this.ulimits = ulimits;
+    }
+    
     public String getUserdata() {
         return this.userdata;
     }
 
     public void setUserdata(String userdata) {
       this.userdata = userdata;
+    }
+    
+    public String getUsernsMode() {
+        return this.usernsMode;
+    }
+
+    public void setUsernsMode(String usernsMode) {
+      this.usernsMode = usernsMode;
+    }
+    
+    public String getUts() {
+        return this.uts;
+    }
+
+    public void setUts(String uts) {
+      this.uts = uts;
     }
     
     public String getUuid() {

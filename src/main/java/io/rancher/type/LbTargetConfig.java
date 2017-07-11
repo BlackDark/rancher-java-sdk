@@ -5,7 +5,7 @@ import java.util.Map;
 import io.rancher.base.AbstractType;
 import java.util.List;
 
-public class SetLoadBalancerServiceLinksInput extends AbstractType {
+public class LbTargetConfig extends AbstractType {
 
     private Map<String, String> links;
 
@@ -19,14 +19,14 @@ public class SetLoadBalancerServiceLinksInput extends AbstractType {
     
 
     
-    private List<LoadBalancerServiceLink> serviceLinks;
+    private List<TargetPortRule> portRules;
     
-    public List<LoadBalancerServiceLink> getServiceLinks() {
-        return this.serviceLinks;
+    public List<TargetPortRule> getPortRules() {
+        return this.portRules;
     }
 
-    public void setServiceLinks(List<LoadBalancerServiceLink> serviceLinks) {
-      this.serviceLinks = serviceLinks;
+    public void setPortRules(List<TargetPortRule> portRules) {
+      this.portRules = portRules;
     }
     
 }

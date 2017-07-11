@@ -3,6 +3,8 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
+import java.util.List;
+import java.util.Map;
 
 public class Network extends AbstractType {
 
@@ -20,6 +22,18 @@ public class Network extends AbstractType {
         return this.links.get("account");
     }
     
+    public String getIpAddressesLink() {
+        return this.links.get("ipAddresses");
+    }
+    
+    public String getNetworkDriverLink() {
+        return this.links.get("networkDriver");
+    }
+    
+    public String getSubnetsLink() {
+        return this.links.get("subnets");
+    }
+    
 
     
     private String accountId;
@@ -28,13 +42,25 @@ public class Network extends AbstractType {
     
     private String description;
     
+    private List<String> dns;
+    
+    private List<String> dnsSearch;
+    
+    private Boolean hostPorts;
+    
     private String kind;
     
+    private Map<String, Object> metadata;
+    
     private String name;
+    
+    private String networkDriverId;
     
     private String removed;
     
     private String state;
+    
+    private List<Subnet> subnets;
     
     private String transitioning;
     
@@ -68,6 +94,30 @@ public class Network extends AbstractType {
       this.description = description;
     }
     
+    public List<String> getDns() {
+        return this.dns;
+    }
+
+    public void setDns(List<String> dns) {
+      this.dns = dns;
+    }
+    
+    public List<String> getDnsSearch() {
+        return this.dnsSearch;
+    }
+
+    public void setDnsSearch(List<String> dnsSearch) {
+      this.dnsSearch = dnsSearch;
+    }
+    
+    public Boolean getHostPorts() {
+        return this.hostPorts;
+    }
+
+    public void setHostPorts(Boolean hostPorts) {
+      this.hostPorts = hostPorts;
+    }
+    
     public String getKind() {
         return this.kind;
     }
@@ -76,12 +126,28 @@ public class Network extends AbstractType {
       this.kind = kind;
     }
     
+    public Map<String, Object> getMetadata() {
+        return this.metadata;
+    }
+
+    public void setMetadata(Map<String, Object> metadata) {
+      this.metadata = metadata;
+    }
+    
     public String getName() {
         return this.name;
     }
 
     public void setName(String name) {
       this.name = name;
+    }
+    
+    public String getNetworkDriverId() {
+        return this.networkDriverId;
+    }
+
+    public void setNetworkDriverId(String networkDriverId) {
+      this.networkDriverId = networkDriverId;
     }
     
     public String getRemoved() {
@@ -98,6 +164,14 @@ public class Network extends AbstractType {
 
     public void setState(String state) {
       this.state = state;
+    }
+    
+    public List<Subnet> getSubnets() {
+        return this.subnets;
+    }
+
+    public void setSubnets(List<Subnet> subnets) {
+      this.subnets = subnets;
     }
     
     public String getTransitioning() {

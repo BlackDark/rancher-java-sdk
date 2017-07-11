@@ -4,6 +4,9 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.Network;
 import io.rancher.type.Account;
+import io.rancher.type.IpAddresse;
+import io.rancher.type.NetworkDriver;
+import io.rancher.type.Subnet;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -55,5 +58,14 @@ public interface NetworkService {
   
   @GET
   Call<Account> getLinkAccount(@Url String url );
+  
+  @GET
+  Call<TypeCollection<IpAddresse>> getLinkIpAddresses(@Url String url );
+  
+  @GET
+  Call<NetworkDriver> getLinkNetworkDriver(@Url String url );
+  
+  @GET
+  Call<TypeCollection<Subnet>> getLinkSubnets(@Url String url );
   
 }

@@ -24,8 +24,16 @@ public class Instance extends AbstractType {
         return this.links.get("credentials");
     }
     
+    public String getHealthcheckInstanceHostMapsLink() {
+        return this.links.get("healthcheckInstanceHostMaps");
+    }
+    
     public String getHostsLink() {
         return this.links.get("hosts");
+    }
+    
+    public String getInstanceLinksLink() {
+        return this.links.get("instanceLinks");
     }
     
     public String getInstancesLink() {
@@ -38,6 +46,18 @@ public class Instance extends AbstractType {
     
     public String getPortsLink() {
         return this.links.get("ports");
+    }
+    
+    public String getServiceEventsLink() {
+        return this.links.get("serviceEvents");
+    }
+    
+    public String getServiceExposeMapsLink() {
+        return this.links.get("serviceExposeMaps");
+    }
+    
+    public String getServiceLogsLink() {
+        return this.links.get("serviceLogs");
     }
     
     public String getServicesLink() {

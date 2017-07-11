@@ -3,8 +3,9 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
+import java.util.Map;
 
-public class IpAddressAssociateInput extends AbstractType {
+public class Binding extends AbstractType {
 
     private Map<String, String> links;
 
@@ -18,14 +19,14 @@ public class IpAddressAssociateInput extends AbstractType {
     
 
     
-    private String ipAddressId;
+    private Map<String, Object> services;
     
-    public String getIpAddressId() {
-        return this.ipAddressId;
+    public Map<String, Object> getServices() {
+        return this.services;
     }
 
-    public void setIpAddressId(String ipAddressId) {
-      this.ipAddressId = ipAddressId;
+    public void setServices(Map<String, Object> services) {
+      this.services = services;
     }
     
 }

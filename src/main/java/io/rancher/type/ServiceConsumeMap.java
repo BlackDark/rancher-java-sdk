@@ -21,6 +21,10 @@ public class ServiceConsumeMap extends AbstractType {
         return this.links.get("account");
     }
     
+    public String getInstanceLinksLink() {
+        return this.links.get("instanceLinks");
+    }
+    
     public String getServiceLink() {
         return this.links.get("service");
     }

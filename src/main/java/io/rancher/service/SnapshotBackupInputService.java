@@ -3,6 +3,7 @@ package io.rancher.service;
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.SnapshotBackupInput;
+import io.rancher.type.BackupTarget;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -36,5 +37,8 @@ public interface SnapshotBackupInputService {
   Call<Response> delete(@Path("id") String id);
   
 
+  
+  @GET
+  Call<BackupTarget> getLinkBackupTarget(@Url String url );
   
 }

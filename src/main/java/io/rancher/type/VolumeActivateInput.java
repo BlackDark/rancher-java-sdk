@@ -4,7 +4,7 @@ import java.util.Map;
 
 import io.rancher.base.AbstractType;
 
-public class AddRemoveLoadBalancerServiceLinkInput extends AbstractType {
+public class VolumeActivateInput extends AbstractType {
 
     private Map<String, String> links;
 
@@ -18,14 +18,14 @@ public class AddRemoveLoadBalancerServiceLinkInput extends AbstractType {
     
 
     
-    private LoadBalancerServiceLink serviceLink;
+    private String hostId;
     
-    public LoadBalancerServiceLink getServiceLink() {
-        return this.serviceLink;
+    public String getHostId() {
+        return this.hostId;
     }
 
-    public void setServiceLink(LoadBalancerServiceLink serviceLink) {
-      this.serviceLink = serviceLink;
+    public void setHostId(String hostId) {
+      this.hostId = hostId;
     }
     
 }

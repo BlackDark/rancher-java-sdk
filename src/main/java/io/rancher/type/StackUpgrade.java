@@ -5,7 +5,7 @@ import java.util.Map;
 import io.rancher.base.AbstractType;
 import java.util.Map;
 
-public class EnvironmentUpgrade extends AbstractType {
+public class StackUpgrade extends AbstractType {
 
     private Map<String, String> links;
 

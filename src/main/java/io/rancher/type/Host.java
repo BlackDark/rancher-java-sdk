@@ -22,12 +22,36 @@ public class Host extends AbstractType {
         return this.links.get("account");
     }
     
+    public String getContainerEventsLink() {
+        return this.links.get("containerEvents");
+    }
+    
+    public String getHealthcheckInstanceHostMapsLink() {
+        return this.links.get("healthcheckInstanceHostMaps");
+    }
+    
     public String getHostsLink() {
         return this.links.get("hosts");
     }
     
     public String getInstancesLink() {
         return this.links.get("instances");
+    }
+    
+    public String getIpAddressesLink() {
+        return this.links.get("ipAddresses");
+    }
+    
+    public String getPhysicalHostLink() {
+        return this.links.get("physicalHost");
+    }
+    
+    public String getServiceEventsLink() {
+        return this.links.get("serviceEvents");
+    }
+    
+    public String getStoragePoolsLink() {
+        return this.links.get("storagePools");
     }
     
     public String getVolumesLink() {
@@ -37,6 +61,8 @@ public class Host extends AbstractType {
 
     
     private String accountId;
+    
+    private String agentIpAddress;
     
     private String agentState;
     
@@ -78,9 +104,17 @@ public class Host extends AbstractType {
     
     private Map<String, Object> info;
     
+    private List<String> instanceIds;
+    
     private String kind;
     
     private Map<String, Object> labels;
+    
+    private Integer localStorageMb;
+    
+    private Integer memory;
+    
+    private Integer milliCpu;
     
     private String name;
     
@@ -108,6 +142,14 @@ public class Host extends AbstractType {
 
     public void setAccountId(String accountId) {
       this.accountId = accountId;
+    }
+    
+    public String getAgentIpAddress() {
+        return this.agentIpAddress;
+    }
+
+    public void setAgentIpAddress(String agentIpAddress) {
+      this.agentIpAddress = agentIpAddress;
     }
     
     public String getAgentState() {
@@ -270,6 +312,14 @@ public class Host extends AbstractType {
       this.info = info;
     }
     
+    public List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public void setInstanceIds(List<String> instanceIds) {
+      this.instanceIds = instanceIds;
+    }
+    
     public String getKind() {
         return this.kind;
     }
@@ -284,6 +334,30 @@ public class Host extends AbstractType {
 
     public void setLabels(Map<String, Object> labels) {
       this.labels = labels;
+    }
+    
+    public Integer getLocalStorageMb() {
+        return this.localStorageMb;
+    }
+
+    public void setLocalStorageMb(Integer localStorageMb) {
+      this.localStorageMb = localStorageMb;
+    }
+    
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    public void setMemory(Integer memory) {
+      this.memory = memory;
+    }
+    
+    public Integer getMilliCpu() {
+        return this.milliCpu;
+    }
+
+    public void setMilliCpu(Integer milliCpu) {
+      this.milliCpu = milliCpu;
     }
     
     public String getName() {

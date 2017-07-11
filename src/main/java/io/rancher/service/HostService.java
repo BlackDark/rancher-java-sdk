@@ -4,9 +4,15 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.Host;
 import io.rancher.type.Account;
+import io.rancher.type.ContainerEvent;
+import io.rancher.type.HealthcheckInstanceHostMap;
 import io.rancher.type.Host;
 import io.rancher.type.HostAccess;
 import io.rancher.type.Instance;
+import io.rancher.type.IpAddresse;
+import io.rancher.type.PhysicalHost;
+import io.rancher.type.ServiceEvent;
+import io.rancher.type.StoragePool;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
@@ -49,6 +55,12 @@ public interface HostService {
   @POST("host/{id}?action=dockersocket")
   Call<HostAccess> dockersocket(@Path("id") String id);
   
+  @POST("host/{id}?action=error")
+  Call<Host> error(@Path("id") String id);
+  
+  @POST("host/{id}?action=provision")
+  Call<Host> provision(@Path("id") String id);
+  
   @POST("host/{id}?action=purge")
   Call<Host> purge(@Path("id") String id);
   
@@ -64,10 +76,28 @@ public interface HostService {
   Call<Account> getLinkAccount(@Url String url );
   
   @GET
+  Call<TypeCollection<ContainerEvent>> getLinkContainerEvents(@Url String url );
+  
+  @GET
+  Call<TypeCollection<HealthcheckInstanceHostMap>> getLinkHealthcheckInstanceHostMaps(@Url String url );
+  
+  @GET
   Call<TypeCollection<Host>> getLinkHosts(@Url String url );
   
   @GET
   Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
+  
+  @GET
+  Call<TypeCollection<IpAddresse>> getLinkIpAddresses(@Url String url );
+  
+  @GET
+  Call<PhysicalHost> getLinkPhysicalHost(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceEvent>> getLinkServiceEvents(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StoragePool>> getLinkStoragePools(@Url String url );
   
   @GET
   Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );

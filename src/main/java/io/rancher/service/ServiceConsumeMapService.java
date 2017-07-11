@@ -4,6 +4,7 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.ServiceConsumeMap;
 import io.rancher.type.Account;
+import io.rancher.type.InstanceLink;
 import io.rancher.type.Service;
 
 import retrofit2.Call;
@@ -44,6 +45,9 @@ public interface ServiceConsumeMapService {
   
   @GET
   Call<Account> getLinkAccount(@Url String url );
+  
+  @GET
+  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url );
   
   @GET
   Call<Service> getLinkService(@Url String url );

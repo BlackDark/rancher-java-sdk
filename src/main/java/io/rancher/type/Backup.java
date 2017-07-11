@@ -20,6 +20,10 @@ public class Backup extends AbstractType {
         return this.links.get("account");
     }
     
+    public String getBackupTargetLink() {
+        return this.links.get("backupTarget");
+    }
+    
     public String getSnapshotLink() {
         return this.links.get("snapshot");
     }

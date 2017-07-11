@@ -3,9 +3,8 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.Map;
 
-public class Environment extends AbstractType {
+public class Subnet extends AbstractType {
 
     private Map<String, String> links;
 
@@ -21,41 +20,39 @@ public class Environment extends AbstractType {
         return this.links.get("account");
     }
     
-    public String getServicesLink() {
-        return this.links.get("services");
+    public String getIpAddressesLink() {
+        return this.links.get("ipAddresses");
+    }
+    
+    public String getNetworkLink() {
+        return this.links.get("network");
     }
     
 
     
     private String accountId;
     
+    private Integer cidrSize;
+    
     private String created;
     
     private String description;
     
-    private String dockerCompose;
+    private String endAddress;
     
-    private Map<String, Object> environment;
-    
-    private String externalId;
-    
-    private String healthState;
+    private String gateway;
     
     private String kind;
     
     private String name;
     
-    private Map<String, Object> outputs;
+    private String networkAddress;
     
-    private Map<String, Object> previousEnvironment;
-    
-    private String previousExternalId;
-    
-    private String rancherCompose;
+    private String networkId;
     
     private String removed;
     
-    private Boolean startOnCreate;
+    private String startAddress;
     
     private String state;
     
@@ -75,6 +72,14 @@ public class Environment extends AbstractType {
       this.accountId = accountId;
     }
     
+    public Integer getCidrSize() {
+        return this.cidrSize;
+    }
+
+    public void setCidrSize(Integer cidrSize) {
+      this.cidrSize = cidrSize;
+    }
+    
     public String getCreated() {
         return this.created;
     }
@@ -91,36 +96,20 @@ public class Environment extends AbstractType {
       this.description = description;
     }
     
-    public String getDockerCompose() {
-        return this.dockerCompose;
+    public String getEndAddress() {
+        return this.endAddress;
     }
 
-    public void setDockerCompose(String dockerCompose) {
-      this.dockerCompose = dockerCompose;
+    public void setEndAddress(String endAddress) {
+      this.endAddress = endAddress;
     }
     
-    public Map<String, Object> getEnvironment() {
-        return this.environment;
+    public String getGateway() {
+        return this.gateway;
     }
 
-    public void setEnvironment(Map<String, Object> environment) {
-      this.environment = environment;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getHealthState() {
-        return this.healthState;
-    }
-
-    public void setHealthState(String healthState) {
-      this.healthState = healthState;
+    public void setGateway(String gateway) {
+      this.gateway = gateway;
     }
     
     public String getKind() {
@@ -139,36 +128,20 @@ public class Environment extends AbstractType {
       this.name = name;
     }
     
-    public Map<String, Object> getOutputs() {
-        return this.outputs;
+    public String getNetworkAddress() {
+        return this.networkAddress;
     }
 
-    public void setOutputs(Map<String, Object> outputs) {
-      this.outputs = outputs;
+    public void setNetworkAddress(String networkAddress) {
+      this.networkAddress = networkAddress;
     }
     
-    public Map<String, Object> getPreviousEnvironment() {
-        return this.previousEnvironment;
+    public String getNetworkId() {
+        return this.networkId;
     }
 
-    public void setPreviousEnvironment(Map<String, Object> previousEnvironment) {
-      this.previousEnvironment = previousEnvironment;
-    }
-    
-    public String getPreviousExternalId() {
-        return this.previousExternalId;
-    }
-
-    public void setPreviousExternalId(String previousExternalId) {
-      this.previousExternalId = previousExternalId;
-    }
-    
-    public String getRancherCompose() {
-        return this.rancherCompose;
-    }
-
-    public void setRancherCompose(String rancherCompose) {
-      this.rancherCompose = rancherCompose;
+    public void setNetworkId(String networkId) {
+      this.networkId = networkId;
     }
     
     public String getRemoved() {
@@ -179,12 +152,12 @@ public class Environment extends AbstractType {
       this.removed = removed;
     }
     
-    public Boolean getStartOnCreate() {
-        return this.startOnCreate;
+    public String getStartAddress() {
+        return this.startAddress;
     }
 
-    public void setStartOnCreate(Boolean startOnCreate) {
-      this.startOnCreate = startOnCreate;
+    public void setStartAddress(String startAddress) {
+      this.startAddress = startAddress;
     }
     
     public String getState() {

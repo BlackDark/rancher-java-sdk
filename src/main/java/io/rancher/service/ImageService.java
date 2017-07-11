@@ -5,6 +5,7 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.Image;
 import io.rancher.type.Account;
 import io.rancher.type.Instance;
+import io.rancher.type.StoragePool;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
@@ -60,6 +61,9 @@ public interface ImageService {
   
   @GET
   Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StoragePool>> getLinkStoragePools(@Url String url );
   
   @GET
   Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );

@@ -4,13 +4,17 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.LoadBalancerService;
 import io.rancher.type.Account;
-import io.rancher.type.AddRemoveLoadBalancerServiceLinkInput;
-import io.rancher.type.Environment;
+import io.rancher.type.AddRemoveServiceLinkInput;
 import io.rancher.type.Instance;
+import io.rancher.type.NetworkDriver;
 import io.rancher.type.Service;
+import io.rancher.type.ServiceExposeMap;
+import io.rancher.type.ServiceLog;
 import io.rancher.type.ServiceRestart;
 import io.rancher.type.ServiceUpgrade;
-import io.rancher.type.SetLoadBalancerServiceLinksInput;
+import io.rancher.type.SetServiceLinksInput;
+import io.rancher.type.Stack;
+import io.rancher.type.StorageDriver;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -47,13 +51,13 @@ public interface LoadBalancerServiceService {
   Call<Service> activate(@Path("id") String id);
   
   @POST("loadBalancerService/{id}?action=addservicelink")
-  Call<Service> addservicelink(@Path("id") String id, @Body AddRemoveLoadBalancerServiceLinkInput addRemoveLoadBalancerServiceLinkInput);
-  
-  @POST("loadBalancerService/{id}?action=cancelrollback")
-  Call<Service> cancelrollback(@Path("id") String id);
+  Call<Service> addservicelink(@Path("id") String id, @Body AddRemoveServiceLinkInput addRemoveServiceLinkInput);
   
   @POST("loadBalancerService/{id}?action=cancelupgrade")
   Call<Service> cancelupgrade(@Path("id") String id);
+  
+  @POST("loadBalancerService/{id}?action=continueupgrade")
+  Call<Service> continueupgrade(@Path("id") String id);
   
   @POST("loadBalancerService/{id}?action=deactivate")
   Call<Service> deactivate(@Path("id") String id);
@@ -65,7 +69,7 @@ public interface LoadBalancerServiceService {
   Call<Service> remove(@Path("id") String id);
   
   @POST("loadBalancerService/{id}?action=removeservicelink")
-  Call<Service> removeservicelink(@Path("id") String id, @Body AddRemoveLoadBalancerServiceLinkInput addRemoveLoadBalancerServiceLinkInput);
+  Call<Service> removeservicelink(@Path("id") String id, @Body AddRemoveServiceLinkInput addRemoveServiceLinkInput);
   
   @POST("loadBalancerService/{id}?action=restart")
   Call<Service> restart(@Path("id") String id, @Body ServiceRestart serviceRestart);
@@ -74,7 +78,7 @@ public interface LoadBalancerServiceService {
   Call<Service> rollback(@Path("id") String id);
   
   @POST("loadBalancerService/{id}?action=setservicelinks")
-  Call<Service> setservicelinks(@Path("id") String id, @Body SetLoadBalancerServiceLinksInput setLoadBalancerServiceLinksInput);
+  Call<Service> setservicelinks(@Path("id") String id, @Body SetServiceLinksInput setServiceLinksInput);
   
   @POST("loadBalancerService/{id}?action=upgrade")
   Call<Service> upgrade(@Path("id") String id, @Body ServiceUpgrade serviceUpgrade);
@@ -85,9 +89,21 @@ public interface LoadBalancerServiceService {
   Call<Account> getLinkAccount(@Url String url );
   
   @GET
-  Call<Environment> getLinkEnvironment(@Url String url );
+  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
   
   @GET
-  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
+  Call<TypeCollection<NetworkDriver>> getLinkNetworkDrivers(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
+  
+  @GET
+  Call<Stack> getLinkStack(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StorageDriver>> getLinkStorageDrivers(@Url String url );
   
 }

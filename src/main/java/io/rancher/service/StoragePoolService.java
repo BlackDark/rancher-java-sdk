@@ -7,6 +7,7 @@ import io.rancher.type.Account;
 import io.rancher.type.Credential;
 import io.rancher.type.Host;
 import io.rancher.type.Image;
+import io.rancher.type.StorageDriver;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
@@ -68,6 +69,9 @@ public interface StoragePoolService {
   
   @GET
   Call<TypeCollection<Image>> getLinkImages(@Url String url );
+  
+  @GET
+  Call<StorageDriver> getLinkStorageDriver(@Url String url );
   
   @GET
   Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );

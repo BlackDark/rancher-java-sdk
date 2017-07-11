@@ -3,6 +3,7 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
+import java.util.List;
 import java.util.Map;
 
 public class ComposeProject extends AbstractType {
@@ -25,9 +26,19 @@ public class ComposeProject extends AbstractType {
         return this.links.get("services");
     }
     
+    public String getVolumeTemplatesLink() {
+        return this.links.get("volumeTemplates");
+    }
+    
+    public String getVolumesLink() {
+        return this.links.get("volumes");
+    }
+    
 
     
     private String accountId;
+    
+    private Binding binding;
     
     private String created;
     
@@ -36,6 +47,8 @@ public class ComposeProject extends AbstractType {
     private Map<String, Object> environment;
     
     private String externalId;
+    
+    private String group;
     
     private String healthState;
     
@@ -49,7 +62,11 @@ public class ComposeProject extends AbstractType {
     
     private String removed;
     
+    private List<String> serviceIds;
+    
     private String state;
+    
+    private Boolean system;
     
     private Map<String, Object> templates;
     
@@ -67,6 +84,14 @@ public class ComposeProject extends AbstractType {
 
     public void setAccountId(String accountId) {
       this.accountId = accountId;
+    }
+    
+    public Binding getBinding() {
+        return this.binding;
+    }
+
+    public void setBinding(Binding binding) {
+      this.binding = binding;
     }
     
     public String getCreated() {
@@ -99,6 +124,14 @@ public class ComposeProject extends AbstractType {
 
     public void setExternalId(String externalId) {
       this.externalId = externalId;
+    }
+    
+    public String getGroup() {
+        return this.group;
+    }
+
+    public void setGroup(String group) {
+      this.group = group;
     }
     
     public String getHealthState() {
@@ -149,12 +182,28 @@ public class ComposeProject extends AbstractType {
       this.removed = removed;
     }
     
+    public List<String> getServiceIds() {
+        return this.serviceIds;
+    }
+
+    public void setServiceIds(List<String> serviceIds) {
+      this.serviceIds = serviceIds;
+    }
+    
     public String getState() {
         return this.state;
     }
 
     public void setState(String state) {
       this.state = state;
+    }
+    
+    public Boolean getSystem() {
+        return this.system;
+    }
+
+    public void setSystem(Boolean system) {
+      this.system = system;
     }
     
     public Map<String, Object> getTemplates() {

@@ -16,6 +16,10 @@ public class SnapshotBackupInput extends AbstractType {
         this.links = links;
     }
     
+    public String getBackupTargetLink() {
+        return this.links.get("backupTarget");
+    }
+    
 
     
     private String backupTargetId;

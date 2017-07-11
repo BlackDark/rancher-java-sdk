@@ -4,20 +4,24 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.SecondaryLaunchConfig;
 import io.rancher.type.Account;
-import io.rancher.type.Container;
 import io.rancher.type.ContainerExec;
 import io.rancher.type.ContainerProxy;
 import io.rancher.type.Credential;
+import io.rancher.type.HealthcheckInstanceHostMap;
 import io.rancher.type.Host;
 import io.rancher.type.HostAccess;
 import io.rancher.type.Instance;
 import io.rancher.type.InstanceConsole;
 import io.rancher.type.InstanceConsoleInput;
+import io.rancher.type.InstanceLink;
 import io.rancher.type.InstanceStop;
 import io.rancher.type.Mount;
 import io.rancher.type.Port;
+import io.rancher.type.RegistryCredential;
 import io.rancher.type.Service;
-import io.rancher.type.SetLabelsInput;
+import io.rancher.type.ServiceEvent;
+import io.rancher.type.ServiceExposeMap;
+import io.rancher.type.ServiceLog;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
@@ -84,9 +88,6 @@ public interface SecondaryLaunchConfigService {
   @POST("secondaryLaunchConfig/{id}?action=restore")
   Call<Instance> restore(@Path("id") String id);
   
-  @POST("secondaryLaunchConfig/{id}?action=setlabels")
-  Call<Container> setlabels(@Path("id") String id, @Body SetLabelsInput setLabelsInput);
-  
   @POST("secondaryLaunchConfig/{id}?action=start")
   Call<Instance> start(@Path("id") String id);
   
@@ -111,7 +112,13 @@ public interface SecondaryLaunchConfigService {
   Call<TypeCollection<Credential>> getLinkCredentials(@Url String url );
   
   @GET
+  Call<TypeCollection<HealthcheckInstanceHostMap>> getLinkHealthcheckInstanceHostMaps(@Url String url );
+  
+  @GET
   Call<TypeCollection<Host>> getLinkHosts(@Url String url );
+  
+  @GET
+  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url );
   
   @GET
   Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
@@ -121,6 +128,18 @@ public interface SecondaryLaunchConfigService {
   
   @GET
   Call<TypeCollection<Port>> getLinkPorts(@Url String url );
+  
+  @GET
+  Call<RegistryCredential> getLinkRegistryCredential(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceEvent>> getLinkServiceEvents(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
   
   @GET
   Call<TypeCollection<Service>> getLinkServices(@Url String url );

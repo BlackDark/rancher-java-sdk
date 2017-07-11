@@ -4,6 +4,7 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.Backup;
 import io.rancher.type.Account;
+import io.rancher.type.BackupTarget;
 import io.rancher.type.Snapshot;
 import io.rancher.type.Volume;
 
@@ -45,6 +46,9 @@ public interface BackupService {
   
   @GET
   Call<Account> getLinkAccount(@Url String url );
+  
+  @GET
+  Call<BackupTarget> getLinkBackupTarget(@Url String url );
   
   @GET
   Call<Snapshot> getLinkSnapshot(@Url String url );

@@ -4,9 +4,13 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.ComposeService;
 import io.rancher.type.Account;
-import io.rancher.type.Environment;
 import io.rancher.type.Instance;
+import io.rancher.type.NetworkDriver;
 import io.rancher.type.Service;
+import io.rancher.type.ServiceExposeMap;
+import io.rancher.type.ServiceLog;
+import io.rancher.type.Stack;
+import io.rancher.type.StorageDriver;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -42,11 +46,11 @@ public interface ComposeServiceService {
   @POST("composeService/{id}?action=activate")
   Call<Service> activate(@Path("id") String id);
   
-  @POST("composeService/{id}?action=cancelrollback")
-  Call<Service> cancelrollback(@Path("id") String id);
-  
   @POST("composeService/{id}?action=cancelupgrade")
   Call<Service> cancelupgrade(@Path("id") String id);
+  
+  @POST("composeService/{id}?action=continueupgrade")
+  Call<Service> continueupgrade(@Path("id") String id);
   
   @POST("composeService/{id}?action=finishupgrade")
   Call<Service> finishupgrade(@Path("id") String id);
@@ -63,9 +67,21 @@ public interface ComposeServiceService {
   Call<Account> getLinkAccount(@Url String url );
   
   @GET
-  Call<Environment> getLinkEnvironment(@Url String url );
+  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
   
   @GET
-  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
+  Call<TypeCollection<NetworkDriver>> getLinkNetworkDrivers(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
+  
+  @GET
+  Call<Stack> getLinkStack(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StorageDriver>> getLinkStorageDrivers(@Url String url );
   
 }

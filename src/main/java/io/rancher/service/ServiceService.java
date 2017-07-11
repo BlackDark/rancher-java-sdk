@@ -5,11 +5,15 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.Service;
 import io.rancher.type.Account;
 import io.rancher.type.AddRemoveServiceLinkInput;
-import io.rancher.type.Environment;
 import io.rancher.type.Instance;
+import io.rancher.type.NetworkDriver;
+import io.rancher.type.ServiceExposeMap;
+import io.rancher.type.ServiceLog;
 import io.rancher.type.ServiceRestart;
 import io.rancher.type.ServiceUpgrade;
 import io.rancher.type.SetServiceLinksInput;
+import io.rancher.type.Stack;
+import io.rancher.type.StorageDriver;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -48,11 +52,11 @@ public interface ServiceService {
   @POST("service/{id}?action=addservicelink")
   Call<Service> addservicelink(@Path("id") String id, @Body AddRemoveServiceLinkInput addRemoveServiceLinkInput);
   
-  @POST("service/{id}?action=cancelrollback")
-  Call<Service> cancelrollback(@Path("id") String id);
-  
   @POST("service/{id}?action=cancelupgrade")
   Call<Service> cancelupgrade(@Path("id") String id);
+  
+  @POST("service/{id}?action=continueupgrade")
+  Call<Service> continueupgrade(@Path("id") String id);
   
   @POST("service/{id}?action=deactivate")
   Call<Service> deactivate(@Path("id") String id);
@@ -84,9 +88,21 @@ public interface ServiceService {
   Call<Account> getLinkAccount(@Url String url );
   
   @GET
-  Call<Environment> getLinkEnvironment(@Url String url );
+  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
   
   @GET
-  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
+  Call<TypeCollection<NetworkDriver>> getLinkNetworkDrivers(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
+  
+  @GET
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
+  
+  @GET
+  Call<Stack> getLinkStack(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StorageDriver>> getLinkStorageDrivers(@Url String url );
   
 }

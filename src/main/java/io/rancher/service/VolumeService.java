@@ -5,13 +5,18 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.Volume;
 import io.rancher.type.Account;
 import io.rancher.type.Backup;
+import io.rancher.type.Host;
 import io.rancher.type.Image;
 import io.rancher.type.Instance;
 import io.rancher.type.Mount;
 import io.rancher.type.RestoreFromBackupInput;
 import io.rancher.type.RevertToSnapshotInput;
 import io.rancher.type.Snapshot;
+import io.rancher.type.Stack;
+import io.rancher.type.StorageDriver;
+import io.rancher.type.StoragePool;
 import io.rancher.type.VolumeSnapshotInput;
+import io.rancher.type.VolumeTemplate;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -43,9 +48,6 @@ public interface VolumeService {
 
   @DELETE("volume/{id}")
   Call<Response> delete(@Path("id") String id);
-  
-  @POST("volume/{id}?action=activate")
-  Call<Volume> activate(@Path("id") String id);
   
   @POST("volume/{id}?action=allocate")
   Call<Volume> allocate(@Path("id") String id);
@@ -80,6 +82,9 @@ public interface VolumeService {
   Call<TypeCollection<Backup>> getLinkBackups(@Url String url );
   
   @GET
+  Call<Host> getLinkHost(@Url String url );
+  
+  @GET
   Call<Image> getLinkImage(@Url String url );
   
   @GET
@@ -90,5 +95,17 @@ public interface VolumeService {
   
   @GET
   Call<TypeCollection<Snapshot>> getLinkSnapshots(@Url String url );
+  
+  @GET
+  Call<Stack> getLinkStack(@Url String url );
+  
+  @GET
+  Call<StorageDriver> getLinkStorageDriver(@Url String url );
+  
+  @GET
+  Call<TypeCollection<StoragePool>> getLinkStoragePools(@Url String url );
+  
+  @GET
+  Call<VolumeTemplate> getLinkVolumeTemplate(@Url String url );
   
 }
