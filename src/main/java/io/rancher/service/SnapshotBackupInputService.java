@@ -3,7 +3,6 @@ package io.rancher.service;
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.SnapshotBackupInput;
-import io.rancher.type.Backup;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -35,9 +34,6 @@ public interface SnapshotBackupInputService {
 
   @DELETE("snapshotBackupInput/{id}")
   Call<Response> delete(@Path("id") String id);
-  
-  @POST("snapshotBackupInput/{id}?action=remove")
-  Call<Backup> remove(@Path("id") String id);
   
 
   

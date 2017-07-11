@@ -27,8 +27,6 @@ public class ExternalServiceEvent extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private Map<String, Object> environment;
     
     private String eventType;
@@ -65,14 +63,6 @@ public class ExternalServiceEvent extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public Map<String, Object> getEnvironment() {

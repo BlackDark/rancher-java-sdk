@@ -4,7 +4,6 @@ import java.util.Map;
 
 import io.rancher.base.AbstractType;
 import java.util.List;
-import java.util.Map;
 
 public class Project extends AbstractType {
 
@@ -16,10 +15,6 @@ public class Project extends AbstractType {
 
     public void setLinks(Map<String, String> links) {
         this.links = links;
-    }
-    
-    public String getAgentsLink() {
-        return this.links.get("agents");
     }
     
     public String getBackupsLink() {
@@ -80,11 +75,7 @@ public class Project extends AbstractType {
     
 
     
-    private Boolean allowSystemRole;
-    
     private String created;
-    
-    private Map<String, Object> data;
     
     private String description;
     
@@ -99,8 +90,6 @@ public class Project extends AbstractType {
     private String name;
     
     private Boolean publicDns;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -120,28 +109,12 @@ public class Project extends AbstractType {
     
     private Boolean virtualMachine;
     
-    public Boolean getAllowSystemRole() {
-        return this.allowSystemRole;
-    }
-
-    public void setAllowSystemRole(Boolean allowSystemRole) {
-      this.allowSystemRole = allowSystemRole;
-    }
-    
     public String getCreated() {
         return this.created;
     }
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -198,14 +171,6 @@ public class Project extends AbstractType {
 
     public void setPublicDns(Boolean publicDns) {
       this.publicDns = publicDns;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

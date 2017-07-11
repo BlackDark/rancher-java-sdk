@@ -3,7 +3,6 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.Map;
 
 public class Port extends AbstractType {
 
@@ -33,8 +32,6 @@ public class Port extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private String instanceId;
@@ -52,8 +49,6 @@ public class Port extends AbstractType {
     private String publicIpAddressId;
     
     private Integer publicPort;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -89,14 +84,6 @@ public class Port extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -169,14 +156,6 @@ public class Port extends AbstractType {
 
     public void setPublicPort(Integer publicPort) {
       this.publicPort = publicPort;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

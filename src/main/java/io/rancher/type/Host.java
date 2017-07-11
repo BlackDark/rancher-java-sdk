@@ -22,10 +22,6 @@ public class Host extends AbstractType {
         return this.links.get("account");
     }
     
-    public String getAgentLink() {
-        return this.links.get("agent");
-    }
-    
     public String getHostsLink() {
         return this.links.get("hosts");
     }
@@ -42,19 +38,41 @@ public class Host extends AbstractType {
     
     private String accountId;
     
-    private String agentId;
-    
     private String agentState;
     
-    private String apiProxy;
+    private Amazonec2Config amazonec2Config;
+    
+    private String authCertificateAuthority;
+    
+    private String authKey;
+    
+    private AzureConfig azureConfig;
     
     private Integer computeTotal;
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
+    
+    private DigitaloceanConfig digitaloceanConfig;
+    
+    private String dockerVersion;
+    
+    private String driver;
+    
+    private Map<String, Object> engineEnv;
+    
+    private List<String> engineInsecureRegistry;
+    
+    private String engineInstallUrl;
+    
+    private Map<String, Object> engineLabel;
+    
+    private Map<String, Object> engineOpt;
+    
+    private List<String> engineRegistryMirror;
+    
+    private String engineStorageDriver;
     
     private String hostname;
     
@@ -66,11 +84,11 @@ public class Host extends AbstractType {
     
     private String name;
     
+    private PacketConfig packetConfig;
+    
     private String physicalHostId;
     
     private List<PublicEndpoint> publicEndpoints;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -92,14 +110,6 @@ public class Host extends AbstractType {
       this.accountId = accountId;
     }
     
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    public void setAgentId(String agentId) {
-      this.agentId = agentId;
-    }
-    
     public String getAgentState() {
         return this.agentState;
     }
@@ -108,12 +118,36 @@ public class Host extends AbstractType {
       this.agentState = agentState;
     }
     
-    public String getApiProxy() {
-        return this.apiProxy;
+    public Amazonec2Config getAmazonec2Config() {
+        return this.amazonec2Config;
     }
 
-    public void setApiProxy(String apiProxy) {
-      this.apiProxy = apiProxy;
+    public void setAmazonec2Config(Amazonec2Config amazonec2Config) {
+      this.amazonec2Config = amazonec2Config;
+    }
+    
+    public String getAuthCertificateAuthority() {
+        return this.authCertificateAuthority;
+    }
+
+    public void setAuthCertificateAuthority(String authCertificateAuthority) {
+      this.authCertificateAuthority = authCertificateAuthority;
+    }
+    
+    public String getAuthKey() {
+        return this.authKey;
+    }
+
+    public void setAuthKey(String authKey) {
+      this.authKey = authKey;
+    }
+    
+    public AzureConfig getAzureConfig() {
+        return this.azureConfig;
+    }
+
+    public void setAzureConfig(AzureConfig azureConfig) {
+      this.azureConfig = azureConfig;
     }
     
     public Integer getComputeTotal() {
@@ -132,20 +166,92 @@ public class Host extends AbstractType {
       this.created = created;
     }
     
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
-    }
-    
     public String getDescription() {
         return this.description;
     }
 
     public void setDescription(String description) {
       this.description = description;
+    }
+    
+    public DigitaloceanConfig getDigitaloceanConfig() {
+        return this.digitaloceanConfig;
+    }
+
+    public void setDigitaloceanConfig(DigitaloceanConfig digitaloceanConfig) {
+      this.digitaloceanConfig = digitaloceanConfig;
+    }
+    
+    public String getDockerVersion() {
+        return this.dockerVersion;
+    }
+
+    public void setDockerVersion(String dockerVersion) {
+      this.dockerVersion = dockerVersion;
+    }
+    
+    public String getDriver() {
+        return this.driver;
+    }
+
+    public void setDriver(String driver) {
+      this.driver = driver;
+    }
+    
+    public Map<String, Object> getEngineEnv() {
+        return this.engineEnv;
+    }
+
+    public void setEngineEnv(Map<String, Object> engineEnv) {
+      this.engineEnv = engineEnv;
+    }
+    
+    public List<String> getEngineInsecureRegistry() {
+        return this.engineInsecureRegistry;
+    }
+
+    public void setEngineInsecureRegistry(List<String> engineInsecureRegistry) {
+      this.engineInsecureRegistry = engineInsecureRegistry;
+    }
+    
+    public String getEngineInstallUrl() {
+        return this.engineInstallUrl;
+    }
+
+    public void setEngineInstallUrl(String engineInstallUrl) {
+      this.engineInstallUrl = engineInstallUrl;
+    }
+    
+    public Map<String, Object> getEngineLabel() {
+        return this.engineLabel;
+    }
+
+    public void setEngineLabel(Map<String, Object> engineLabel) {
+      this.engineLabel = engineLabel;
+    }
+    
+    public Map<String, Object> getEngineOpt() {
+        return this.engineOpt;
+    }
+
+    public void setEngineOpt(Map<String, Object> engineOpt) {
+      this.engineOpt = engineOpt;
+    }
+    
+    public List<String> getEngineRegistryMirror() {
+        return this.engineRegistryMirror;
+    }
+
+    public void setEngineRegistryMirror(List<String> engineRegistryMirror) {
+      this.engineRegistryMirror = engineRegistryMirror;
+    }
+    
+    public String getEngineStorageDriver() {
+        return this.engineStorageDriver;
+    }
+
+    public void setEngineStorageDriver(String engineStorageDriver) {
+      this.engineStorageDriver = engineStorageDriver;
     }
     
     public String getHostname() {
@@ -188,6 +294,14 @@ public class Host extends AbstractType {
       this.name = name;
     }
     
+    public PacketConfig getPacketConfig() {
+        return this.packetConfig;
+    }
+
+    public void setPacketConfig(PacketConfig packetConfig) {
+      this.packetConfig = packetConfig;
+    }
+    
     public String getPhysicalHostId() {
         return this.physicalHostId;
     }
@@ -202,14 +316,6 @@ public class Host extends AbstractType {
 
     public void setPublicEndpoints(List<PublicEndpoint> publicEndpoints) {
       this.publicEndpoints = publicEndpoints;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

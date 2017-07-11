@@ -22,10 +22,6 @@ public class LaunchConfig extends AbstractType {
         return this.links.get("account");
     }
     
-    public String getAgentLink() {
-        return this.links.get("agent");
-    }
-    
     public String getCredentialsLink() {
         return this.links.get("credentials");
     }
@@ -58,10 +54,6 @@ public class LaunchConfig extends AbstractType {
     
     private String accountId;
     
-    private String agentId;
-    
-    private String allocationState;
-    
     private Map<String, Object> blkioDeviceOptions;
     
     private DockerBuild build;
@@ -81,8 +73,6 @@ public class LaunchConfig extends AbstractType {
     private Integer createIndex;
     
     private String created;
-    
-    private Map<String, Object> data;
     
     private Map<String, Object> dataVolumeMounts;
     
@@ -168,8 +158,6 @@ public class LaunchConfig extends AbstractType {
     
     private String registryCredentialId;
     
-    private String removeTime;
-    
     private String removed;
     
     private String requestedHostId;
@@ -187,8 +175,6 @@ public class LaunchConfig extends AbstractType {
     private Boolean stdinOpen;
     
     private String systemContainer;
-    
-    private String token;
     
     private String transitioning;
     
@@ -218,22 +204,6 @@ public class LaunchConfig extends AbstractType {
 
     public void setAccountId(String accountId) {
       this.accountId = accountId;
-    }
-    
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    public void setAgentId(String agentId) {
-      this.agentId = agentId;
-    }
-    
-    public String getAllocationState() {
-        return this.allocationState;
-    }
-
-    public void setAllocationState(String allocationState) {
-      this.allocationState = allocationState;
     }
     
     public Map<String, Object> getBlkioDeviceOptions() {
@@ -314,14 +284,6 @@ public class LaunchConfig extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public Map<String, Object> getDataVolumeMounts() {
@@ -660,14 +622,6 @@ public class LaunchConfig extends AbstractType {
       this.registryCredentialId = registryCredentialId;
     }
     
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
-    }
-    
     public String getRemoved() {
         return this.removed;
     }
@@ -738,14 +692,6 @@ public class LaunchConfig extends AbstractType {
 
     public void setSystemContainer(String systemContainer) {
       this.systemContainer = systemContainer;
-    }
-    
-    public String getToken() {
-        return this.token;
-    }
-
-    public void setToken(String token) {
-      this.token = token;
     }
     
     public String getTransitioning() {

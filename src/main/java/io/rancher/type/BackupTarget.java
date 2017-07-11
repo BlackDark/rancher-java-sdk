@@ -3,7 +3,6 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.Map;
 
 public class BackupTarget extends AbstractType {
 
@@ -31,8 +30,6 @@ public class BackupTarget extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private String kind;
@@ -40,8 +37,6 @@ public class BackupTarget extends AbstractType {
     private String name;
     
     private NfsConfig nfsConfig;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -69,14 +64,6 @@ public class BackupTarget extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -109,14 +96,6 @@ public class BackupTarget extends AbstractType {
 
     public void setNfsConfig(NfsConfig nfsConfig) {
       this.nfsConfig = nfsConfig;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

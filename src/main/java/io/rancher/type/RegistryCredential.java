@@ -3,7 +3,6 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.Map;
 
 public class RegistryCredential extends AbstractType {
 
@@ -39,8 +38,6 @@ public class RegistryCredential extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private String email;
@@ -52,8 +49,6 @@ public class RegistryCredential extends AbstractType {
     private String publicValue;
     
     private String registryId;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -83,14 +78,6 @@ public class RegistryCredential extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -139,14 +126,6 @@ public class RegistryCredential extends AbstractType {
 
     public void setRegistryId(String registryId) {
       this.registryId = registryId;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

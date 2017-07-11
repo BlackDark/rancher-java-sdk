@@ -3,7 +3,6 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.Map;
 
 public class Account extends AbstractType {
 
@@ -15,10 +14,6 @@ public class Account extends AbstractType {
 
     public void setLinks(Map<String, String> links) {
         this.links = links;
-    }
-    
-    public String getAgentsLink() {
-        return this.links.get("agents");
     }
     
     public String getBackupsLink() {
@@ -81,21 +76,11 @@ public class Account extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
-    
-    private String externalId;
-    
-    private String externalIdType;
-    
-    private String identity;
     
     private String kind;
     
     private String name;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -117,44 +102,12 @@ public class Account extends AbstractType {
       this.created = created;
     }
     
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
-    }
-    
     public String getDescription() {
         return this.description;
     }
 
     public void setDescription(String description) {
       this.description = description;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
-
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getExternalIdType() {
-        return this.externalIdType;
-    }
-
-    public void setExternalIdType(String externalIdType) {
-      this.externalIdType = externalIdType;
-    }
-    
-    public String getIdentity() {
-        return this.identity;
-    }
-
-    public void setIdentity(String identity) {
-      this.identity = identity;
     }
     
     public String getKind() {
@@ -171,14 +124,6 @@ public class Account extends AbstractType {
 
     public void setName(String name) {
       this.name = name;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

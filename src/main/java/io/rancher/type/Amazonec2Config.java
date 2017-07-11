@@ -3,6 +3,7 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
+import java.util.List;
 
 public class Amazonec2Config extends AbstractType {
 
@@ -24,11 +25,19 @@ public class Amazonec2Config extends AbstractType {
     
     private String deviceName;
     
+    private String endpoint;
+    
     private String iamInstanceProfile;
+    
+    private Boolean insecureTransport;
     
     private String instanceType;
     
+    private String keypairName;
+    
     private Boolean monitoring;
+    
+    private List<String> openPort;
     
     private Boolean privateAddressOnly;
     
@@ -36,11 +45,13 @@ public class Amazonec2Config extends AbstractType {
     
     private Boolean requestSpotInstance;
     
+    private String retries;
+    
     private String rootSize;
     
     private String secretKey;
     
-    private String securityGroup;
+    private List<String> securityGroup;
     
     private String sessionToken;
     
@@ -88,12 +99,28 @@ public class Amazonec2Config extends AbstractType {
       this.deviceName = deviceName;
     }
     
+    public String getEndpoint() {
+        return this.endpoint;
+    }
+
+    public void setEndpoint(String endpoint) {
+      this.endpoint = endpoint;
+    }
+    
     public String getIamInstanceProfile() {
         return this.iamInstanceProfile;
     }
 
     public void setIamInstanceProfile(String iamInstanceProfile) {
       this.iamInstanceProfile = iamInstanceProfile;
+    }
+    
+    public Boolean getInsecureTransport() {
+        return this.insecureTransport;
+    }
+
+    public void setInsecureTransport(Boolean insecureTransport) {
+      this.insecureTransport = insecureTransport;
     }
     
     public String getInstanceType() {
@@ -104,12 +131,28 @@ public class Amazonec2Config extends AbstractType {
       this.instanceType = instanceType;
     }
     
+    public String getKeypairName() {
+        return this.keypairName;
+    }
+
+    public void setKeypairName(String keypairName) {
+      this.keypairName = keypairName;
+    }
+    
     public Boolean getMonitoring() {
         return this.monitoring;
     }
 
     public void setMonitoring(Boolean monitoring) {
       this.monitoring = monitoring;
+    }
+    
+    public List<String> getOpenPort() {
+        return this.openPort;
+    }
+
+    public void setOpenPort(List<String> openPort) {
+      this.openPort = openPort;
     }
     
     public Boolean getPrivateAddressOnly() {
@@ -136,6 +179,14 @@ public class Amazonec2Config extends AbstractType {
       this.requestSpotInstance = requestSpotInstance;
     }
     
+    public String getRetries() {
+        return this.retries;
+    }
+
+    public void setRetries(String retries) {
+      this.retries = retries;
+    }
+    
     public String getRootSize() {
         return this.rootSize;
     }
@@ -152,11 +203,11 @@ public class Amazonec2Config extends AbstractType {
       this.secretKey = secretKey;
     }
     
-    public String getSecurityGroup() {
+    public List<String> getSecurityGroup() {
         return this.securityGroup;
     }
 
-    public void setSecurityGroup(String securityGroup) {
+    public void setSecurityGroup(List<String> securityGroup) {
       this.securityGroup = securityGroup;
     }
     

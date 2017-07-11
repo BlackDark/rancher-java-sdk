@@ -40,8 +40,6 @@ public class Machine extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private DigitaloceanConfig digitaloceanConfig;
@@ -73,8 +71,6 @@ public class Machine extends AbstractType {
     private String name;
     
     private PacketConfig packetConfig;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -134,14 +130,6 @@ public class Machine extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -270,14 +258,6 @@ public class Machine extends AbstractType {
 
     public void setPacketConfig(PacketConfig packetConfig) {
       this.packetConfig = packetConfig;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

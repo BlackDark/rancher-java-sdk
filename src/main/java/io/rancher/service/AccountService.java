@@ -3,7 +3,6 @@ package io.rancher.service;
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.Account;
-import io.rancher.type.Agent;
 import io.rancher.type.Backup;
 import io.rancher.type.Certificate;
 import io.rancher.type.Credential;
@@ -66,9 +65,6 @@ public interface AccountService {
   Call<Account> restore(@Path("id") String id);
   
 
-  
-  @GET
-  Call<TypeCollection<Agent>> getLinkAgents(@Url String url );
   
   @GET
   Call<TypeCollection<Backup>> getLinkBackups(@Url String url );

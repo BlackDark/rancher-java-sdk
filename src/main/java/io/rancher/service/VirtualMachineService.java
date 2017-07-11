@@ -4,7 +4,6 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.VirtualMachine;
 import io.rancher.type.Account;
-import io.rancher.type.Agent;
 import io.rancher.type.Container;
 import io.rancher.type.ContainerExec;
 import io.rancher.type.ContainerLogs;
@@ -111,9 +110,6 @@ public interface VirtualMachineService {
   
   @GET
   Call<Account> getLinkAccount(@Url String url );
-  
-  @GET
-  Call<Agent> getLinkAgent(@Url String url );
   
   @GET
   Call<TypeCollection<Credential>> getLinkCredentials(@Url String url );

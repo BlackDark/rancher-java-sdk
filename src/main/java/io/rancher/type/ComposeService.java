@@ -4,7 +4,6 @@ import java.util.Map;
 
 import io.rancher.base.AbstractType;
 import java.util.List;
-import java.util.Map;
 
 public class ComposeService extends AbstractType {
 
@@ -38,8 +37,6 @@ public class ComposeService extends AbstractType {
     
     private Integer currentScale;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private String environmentId;
@@ -57,8 +54,6 @@ public class ComposeService extends AbstractType {
     private String name;
     
     private List<PublicEndpoint> publicEndpoints;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -106,14 +101,6 @@ public class ComposeService extends AbstractType {
 
     public void setCurrentScale(Integer currentScale) {
       this.currentScale = currentScale;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -186,14 +173,6 @@ public class ComposeService extends AbstractType {
 
     public void setPublicEndpoints(List<PublicEndpoint> publicEndpoints) {
       this.publicEndpoints = publicEndpoints;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

@@ -32,6 +32,8 @@ public class DigitaloceanConfig extends AbstractType {
     
     private String size;
     
+    private String sshKeyFingerprint;
+    
     private String sshPort;
     
     private String sshUser;
@@ -92,6 +94,14 @@ public class DigitaloceanConfig extends AbstractType {
 
     public void setSize(String size) {
       this.size = size;
+    }
+    
+    public String getSshKeyFingerprint() {
+        return this.sshKeyFingerprint;
+    }
+
+    public void setSshKeyFingerprint(String sshKeyFingerprint) {
+      this.sshKeyFingerprint = sshKeyFingerprint;
     }
     
     public String getSshPort() {

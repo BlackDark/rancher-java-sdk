@@ -31,8 +31,6 @@ public class ComposeProject extends AbstractType {
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
     
     private Map<String, Object> environment;
@@ -48,8 +46,6 @@ public class ComposeProject extends AbstractType {
     private Map<String, Object> previousEnvironment;
     
     private String previousExternalId;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -79,14 +75,6 @@ public class ComposeProject extends AbstractType {
 
     public void setCreated(String created) {
       this.created = created;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDescription() {
@@ -151,14 +139,6 @@ public class ComposeProject extends AbstractType {
 
     public void setPreviousExternalId(String previousExternalId) {
       this.previousExternalId = previousExternalId;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

@@ -20,11 +20,7 @@ public class Setting extends AbstractType {
     
     private String activeValue;
     
-    private Boolean inDb;
-    
     private String name;
-    
-    private String source;
     
     private String value;
     
@@ -36,28 +32,12 @@ public class Setting extends AbstractType {
       this.activeValue = activeValue;
     }
     
-    public Boolean getInDb() {
-        return this.inDb;
-    }
-
-    public void setInDb(Boolean inDb) {
-      this.inDb = inDb;
-    }
-    
     public String getName() {
         return this.name;
     }
 
     public void setName(String name) {
       this.name = name;
-    }
-    
-    public String getSource() {
-        return this.source;
-    }
-
-    public void setSource(String source) {
-      this.source = source;
     }
     
     public String getValue() {

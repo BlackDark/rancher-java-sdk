@@ -4,7 +4,6 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.Host;
 import io.rancher.type.Account;
-import io.rancher.type.Agent;
 import io.rancher.type.Host;
 import io.rancher.type.HostAccess;
 import io.rancher.type.Instance;
@@ -63,9 +62,6 @@ public interface HostService {
   
   @GET
   Call<Account> getLinkAccount(@Url String url );
-  
-  @GET
-  Call<Agent> getLinkAgent(@Url String url );
   
   @GET
   Call<TypeCollection<Host>> getLinkHosts(@Url String url );

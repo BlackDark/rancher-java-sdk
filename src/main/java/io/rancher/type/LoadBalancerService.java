@@ -42,8 +42,6 @@ public class LoadBalancerService extends AbstractType {
     
     private Integer currentScale;
     
-    private Map<String, Object> data;
-    
     private String defaultCertificateId;
     
     private String description;
@@ -67,8 +65,6 @@ public class LoadBalancerService extends AbstractType {
     private String name;
     
     private List<PublicEndpoint> publicEndpoints;
-    
-    private String removeTime;
     
     private String removed;
     
@@ -134,14 +130,6 @@ public class LoadBalancerService extends AbstractType {
 
     public void setCurrentScale(Integer currentScale) {
       this.currentScale = currentScale;
-    }
-    
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
     }
     
     public String getDefaultCertificateId() {
@@ -238,14 +226,6 @@ public class LoadBalancerService extends AbstractType {
 
     public void setPublicEndpoints(List<PublicEndpoint> publicEndpoints) {
       this.publicEndpoints = publicEndpoints;
-    }
-    
-    public String getRemoveTime() {
-        return this.removeTime;
-    }
-
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
     }
     
     public String getRemoved() {

@@ -19,17 +19,7 @@ public class Subscribe extends AbstractType {
     
 
     
-    private String agentId;
-    
     private List<String> eventNames;
-    
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    public void setAgentId(String agentId) {
-      this.agentId = agentId;
-    }
     
     public List<String> getEventNames() {
         return this.eventNames;

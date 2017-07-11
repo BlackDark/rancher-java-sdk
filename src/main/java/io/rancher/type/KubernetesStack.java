@@ -3,10 +3,9 @@ package io.rancher.type;
 import java.util.Map;
 
 import io.rancher.base.AbstractType;
-import java.util.List;
 import java.util.Map;
 
-public class ExternalHandler extends AbstractType {
+public class KubernetesStack extends AbstractType {
 
     private Map<String, String> links;
 
@@ -18,31 +17,43 @@ public class ExternalHandler extends AbstractType {
         this.links = links;
     }
     
+    public String getAccountLink() {
+        return this.links.get("account");
+    }
+    
+    public String getServicesLink() {
+        return this.links.get("services");
+    }
+    
 
+    
+    private String accountId;
     
     private String created;
     
-    private Map<String, Object> data;
-    
     private String description;
+    
+    private Map<String, Object> environment;
+    
+    private String externalId;
+    
+    private String healthState;
     
     private String kind;
     
     private String name;
     
-    private Integer priority;
+    private String namespace;
     
-    private List<ExternalHandlerProcessConfig> processConfigs;
+    private Map<String, Object> previousEnvironment;
     
-    private String removeTime;
+    private String previousExternalId;
     
     private String removed;
     
-    private Integer retries;
-    
     private String state;
     
-    private Integer timeoutMillis;
+    private Map<String, Object> templates;
     
     private String transitioning;
     
@@ -52,6 +63,14 @@ public class ExternalHandler extends AbstractType {
     
     private String uuid;
     
+    public String getAccountId() {
+        return this.accountId;
+    }
+
+    public void setAccountId(String accountId) {
+      this.accountId = accountId;
+    }
+    
     public String getCreated() {
         return this.created;
     }
@@ -60,20 +79,36 @@ public class ExternalHandler extends AbstractType {
       this.created = created;
     }
     
-    public Map<String, Object> getData() {
-        return this.data;
-    }
-
-    public void setData(Map<String, Object> data) {
-      this.data = data;
-    }
-    
     public String getDescription() {
         return this.description;
     }
 
     public void setDescription(String description) {
       this.description = description;
+    }
+    
+    public Map<String, Object> getEnvironment() {
+        return this.environment;
+    }
+
+    public void setEnvironment(Map<String, Object> environment) {
+      this.environment = environment;
+    }
+    
+    public String getExternalId() {
+        return this.externalId;
+    }
+
+    public void setExternalId(String externalId) {
+      this.externalId = externalId;
+    }
+    
+    public String getHealthState() {
+        return this.healthState;
+    }
+
+    public void setHealthState(String healthState) {
+      this.healthState = healthState;
     }
     
     public String getKind() {
@@ -92,28 +127,28 @@ public class ExternalHandler extends AbstractType {
       this.name = name;
     }
     
-    public Integer getPriority() {
-        return this.priority;
+    public String getNamespace() {
+        return this.namespace;
     }
 
-    public void setPriority(Integer priority) {
-      this.priority = priority;
+    public void setNamespace(String namespace) {
+      this.namespace = namespace;
     }
     
-    public List<ExternalHandlerProcessConfig> getProcessConfigs() {
-        return this.processConfigs;
+    public Map<String, Object> getPreviousEnvironment() {
+        return this.previousEnvironment;
     }
 
-    public void setProcessConfigs(List<ExternalHandlerProcessConfig> processConfigs) {
-      this.processConfigs = processConfigs;
+    public void setPreviousEnvironment(Map<String, Object> previousEnvironment) {
+      this.previousEnvironment = previousEnvironment;
     }
     
-    public String getRemoveTime() {
-        return this.removeTime;
+    public String getPreviousExternalId() {
+        return this.previousExternalId;
     }
 
-    public void setRemoveTime(String removeTime) {
-      this.removeTime = removeTime;
+    public void setPreviousExternalId(String previousExternalId) {
+      this.previousExternalId = previousExternalId;
     }
     
     public String getRemoved() {
@@ -124,14 +159,6 @@ public class ExternalHandler extends AbstractType {
       this.removed = removed;
     }
     
-    public Integer getRetries() {
-        return this.retries;
-    }
-
-    public void setRetries(Integer retries) {
-      this.retries = retries;
-    }
-    
     public String getState() {
         return this.state;
     }
@@ -140,12 +167,12 @@ public class ExternalHandler extends AbstractType {
       this.state = state;
     }
     
-    public Integer getTimeoutMillis() {
-        return this.timeoutMillis;
+    public Map<String, Object> getTemplates() {
+        return this.templates;
     }
 
-    public void setTimeoutMillis(Integer timeoutMillis) {
-      this.timeoutMillis = timeoutMillis;
+    public void setTemplates(Map<String, Object> templates) {
+      this.templates = templates;
     }
     
     public String getTransitioning() {
