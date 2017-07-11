@@ -4,7 +4,7 @@ import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
 import io.rancher.type.DefaultNetwork;
 import io.rancher.type.Account;
-import io.rancher.type.IpAddresse;
+import io.rancher.type.IpAddress;
 import io.rancher.type.Network;
 import io.rancher.type.Subnet;
 
@@ -38,31 +38,31 @@ public interface DefaultNetworkService {
 
   @DELETE("defaultNetwork/{id}")
   Call<Response> delete(@Path("id") String id);
-  
+
   @POST("defaultNetwork/{id}?action=activate")
   Call<Network> activate(@Path("id") String id);
-  
+
   @POST("defaultNetwork/{id}?action=deactivate")
   Call<Network> deactivate(@Path("id") String id);
-  
+
   @POST("defaultNetwork/{id}?action=purge")
   Call<Network> purge(@Path("id") String id);
-  
+
   @POST("defaultNetwork/{id}?action=remove")
   Call<Network> remove(@Path("id") String id);
-  
+
   @POST("defaultNetwork/{id}?action=restore")
   Call<Network> restore(@Path("id") String id);
-  
 
-  
+
+
   @GET
   Call<Account> getLinkAccount(@Url String url );
-  
+
   @GET
-  Call<TypeCollection<IpAddresse>> getLinkIpAddresses(@Url String url );
-  
+  Call<TypeCollection<IpAddress>> getLinkIpAddresses(@Url String url );
+
   @GET
   Call<TypeCollection<Subnet>> getLinkSubnets(@Url String url );
-  
+
 }
