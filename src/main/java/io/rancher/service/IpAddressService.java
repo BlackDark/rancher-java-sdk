@@ -8,7 +8,7 @@ import io.rancher.type.Host;
 import io.rancher.type.Network;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -36,7 +36,7 @@ public interface IpAddressService {
   Call<IpAddress> update(@Path("id") String id, @Body IpAddress ipAddress);
 
   @DELETE("ipAddress/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("ipAddress/{id}?action=activate")
   Call<IpAddress> activate(@Path("id") String id);

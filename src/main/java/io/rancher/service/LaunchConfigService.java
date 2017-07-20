@@ -25,7 +25,7 @@ import io.rancher.type.ServiceLog;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -53,7 +53,7 @@ public interface LaunchConfigService {
   Call<LaunchConfig> update(@Path("id") String id, @Body LaunchConfig launchConfig);
 
   @DELETE("launchConfig/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("launchConfig/{id}?action=allocate")
   Call<Instance> allocate(@Path("id") String id);

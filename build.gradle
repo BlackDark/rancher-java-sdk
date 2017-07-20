@@ -11,8 +11,8 @@ sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
 dependencies {
-    compile "com.squareup.retrofit2:retrofit:2.0.0-beta3"
-    compile "com.squareup.retrofit2:converter-jackson:2.0.0-beta3"
+    compile "com.squareup.retrofit2:retrofit:2.3.0"
+    compile "com.squareup.retrofit2:converter-jackson:2.3.0"
 }
 
 task sourceJar(type: Jar) {
@@ -28,7 +28,7 @@ publishing {
         sdk(MavenPublication) {
             groupId 'io.rancher'
             artifactId 'rancher-java-sdk'
-            version '1.0.0'
+            version '1.0.1'
 
             pom.withXml {
                 asNode().dependencies.'*'.findAll() {

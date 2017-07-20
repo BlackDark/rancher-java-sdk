@@ -7,7 +7,7 @@ import io.rancher.type.Account;
 import io.rancher.type.ExternalEvent;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -35,7 +35,7 @@ public interface ExternalVolumeEventService {
   Call<ExternalVolumeEvent> update(@Path("id") String id, @Body ExternalVolumeEvent externalVolumeEvent);
 
   @DELETE("externalVolumeEvent/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("externalVolumeEvent/{id}?action=remove")
   Call<ExternalEvent> remove(@Path("id") String id);

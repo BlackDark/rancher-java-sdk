@@ -8,7 +8,7 @@ import io.rancher.type.IpAddress;
 import io.rancher.type.Network;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -36,7 +36,7 @@ public interface SubnetService {
   Call<Subnet> update(@Path("id") String id, @Body Subnet subnet);
 
   @DELETE("subnet/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
 
   @POST("subnet/{id}?action=activate")
   Call<Subnet> activate(@Path("id") String id);

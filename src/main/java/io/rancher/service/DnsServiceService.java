@@ -17,7 +17,7 @@ import io.rancher.type.Stack;
 import io.rancher.type.StorageDriver;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -45,7 +45,7 @@ public interface DnsServiceService {
   Call<DnsService> update(@Path("id") String id, @Body DnsService dnsService);
 
   @DELETE("dnsService/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("dnsService/{id}?action=activate")
   Call<Service> activate(@Path("id") String id);
