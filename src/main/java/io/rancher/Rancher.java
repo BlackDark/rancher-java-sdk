@@ -12,6 +12,7 @@ import retrofit2.Retrofit;
 
 import java.io.IOException;
 import java.net.URL;
+import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
 /**
@@ -42,7 +43,7 @@ public class Rancher {
         this.retrofit = new Retrofit.Builder()
                 .baseUrl(config.getUrl().toString())
                 .client(builder.build())
-                .addConverterFactory(JacksonConverterFactory.create(configureObjectMapper()))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
     }

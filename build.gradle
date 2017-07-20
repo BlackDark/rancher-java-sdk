@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven-publish'
 
-group = 'com.github.Joni-Lover'
+group = 'com.github.BlackDark'
 
 repositories {
     jcenter()
@@ -13,6 +13,7 @@ targetCompatibility = "1.7"
 dependencies {
     compile "com.squareup.retrofit2:retrofit:2.3.0"
     compile "com.squareup.retrofit2:converter-jackson:2.3.0"
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 }
 
 task sourceJar(type: Jar) {
