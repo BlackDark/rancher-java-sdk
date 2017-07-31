@@ -8,7 +8,7 @@ import io.rancher.type.Image;
 import io.rancher.type.Instance;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -36,7 +36,7 @@ public interface CredentialService {
   Call<Credential> update(@Path("id") String id, @Body Credential credential);
 
   @DELETE("credential/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("credential/{id}?action=activate")
   Call<Credential> activate(@Path("id") String id);

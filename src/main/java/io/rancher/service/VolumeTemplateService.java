@@ -8,7 +8,7 @@ import io.rancher.type.Stack;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -36,7 +36,7 @@ public interface VolumeTemplateService {
   Call<VolumeTemplate> update(@Path("id") String id, @Body VolumeTemplate volumeTemplate);
 
   @DELETE("volumeTemplate/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("volumeTemplate/{id}?action=activate")
   Call<VolumeTemplate> activate(@Path("id") String id);

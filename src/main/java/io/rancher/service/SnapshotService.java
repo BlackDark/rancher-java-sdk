@@ -9,7 +9,7 @@ import io.rancher.type.SnapshotBackupInput;
 import io.rancher.type.Volume;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -37,7 +37,7 @@ public interface SnapshotService {
   Call<Snapshot> update(@Path("id") String id, @Body Snapshot snapshot);
 
   @DELETE("snapshot/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("snapshot/{id}?action=backup")
   Call<Backup> backup(@Path("id") String id, @Body SnapshotBackupInput snapshotBackupInput);

@@ -5,7 +5,7 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.ServiceUpgrade;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -33,7 +33,7 @@ public interface ServiceUpgradeService {
   Call<ServiceUpgrade> update(@Path("id") String id, @Body ServiceUpgrade serviceUpgrade);
 
   @DELETE("serviceUpgrade/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
 
   

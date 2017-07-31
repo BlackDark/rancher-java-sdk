@@ -8,7 +8,7 @@ import io.rancher.type.Host;
 import io.rancher.type.Instance;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -36,7 +36,7 @@ public interface LabelService {
   Call<Label> update(@Path("id") String id, @Body Label label);
 
   @DELETE("label/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("label/{id}?action=remove")
   Call<Label> remove(@Path("id") String id);

@@ -5,7 +5,7 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.ContainerProxy;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -33,7 +33,7 @@ public interface ContainerProxyService {
   Call<ContainerProxy> update(@Path("id") String id, @Body ContainerProxy containerProxy);
 
   @DELETE("containerProxy/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
 
   

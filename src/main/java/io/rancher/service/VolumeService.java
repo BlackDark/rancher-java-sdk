@@ -19,7 +19,7 @@ import io.rancher.type.VolumeSnapshotInput;
 import io.rancher.type.VolumeTemplate;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -47,7 +47,7 @@ public interface VolumeService {
   Call<Volume> update(@Path("id") String id, @Body Volume volume);
 
   @DELETE("volume/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("volume/{id}?action=allocate")
   Call<Volume> allocate(@Path("id") String id);

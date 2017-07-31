@@ -5,7 +5,7 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.MachineDriver;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -33,7 +33,7 @@ public interface MachineDriverService {
   Call<MachineDriver> update(@Path("id") String id, @Body MachineDriver machineDriver);
 
   @DELETE("machineDriver/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
 
   

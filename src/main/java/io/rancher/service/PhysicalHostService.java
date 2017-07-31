@@ -7,7 +7,7 @@ import io.rancher.type.Account;
 import io.rancher.type.Host;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -35,7 +35,7 @@ public interface PhysicalHostService {
   Call<PhysicalHost> update(@Path("id") String id, @Body PhysicalHost physicalHost);
 
   @DELETE("physicalHost/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("physicalHost/{id}?action=bootstrap")
   Call<PhysicalHost> bootstrap(@Path("id") String id);

@@ -10,7 +10,7 @@ import io.rancher.type.Volume;
 import io.rancher.type.VolumeTemplate;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -38,7 +38,7 @@ public interface ComposeProjectService {
   Call<ComposeProject> update(@Path("id") String id, @Body ComposeProject composeProject);
 
   @DELETE("composeProject/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("composeProject/{id}?action=cancelupgrade")
   Call<Stack> cancelupgrade(@Path("id") String id);

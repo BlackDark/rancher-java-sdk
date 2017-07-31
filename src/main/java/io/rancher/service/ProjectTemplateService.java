@@ -6,7 +6,7 @@ import io.rancher.type.ProjectTemplate;
 import io.rancher.type.Account;
 
 import retrofit2.Call;
-import retrofit2.Response;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -34,7 +34,7 @@ public interface ProjectTemplateService {
   Call<ProjectTemplate> update(@Path("id") String id, @Body ProjectTemplate projectTemplate);
 
   @DELETE("projectTemplate/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   
   @POST("projectTemplate/{id}?action=remove")
   Call<ProjectTemplate> remove(@Path("id") String id);
