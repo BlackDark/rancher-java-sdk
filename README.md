@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/Joni-Lover/rancher-java-sdk.svg)]
-(https://jitpack.io/#Joni-Lover/rancher-java-sdk)
+![Release](https://jitpack.io/v/Joni-Lover/rancher-java-sdk.svg)
 
 # Rancher Java SDK
 
