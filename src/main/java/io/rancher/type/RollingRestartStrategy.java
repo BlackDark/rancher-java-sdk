@@ -1,41 +1,40 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class RollingRestartStrategy extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Integer batchSize;
-    
-    private Integer intervalMillis;
-    
-    public Integer getBatchSize() {
-        return this.batchSize;
-    }
 
-    public void setBatchSize(Integer batchSize) {
-      this.batchSize = batchSize;
-    }
-    
-    public Integer getIntervalMillis() {
-        return this.intervalMillis;
-    }
+  private Long batchSize;
 
-    public void setIntervalMillis(Integer intervalMillis) {
-      this.intervalMillis = intervalMillis;
-    }
-    
+  private Long intervalMillis;
+
+  public Long getBatchSize() {
+    return this.batchSize;
+  }
+
+  public void setBatchSize(Long batchSize) {
+    this.batchSize = batchSize;
+  }
+
+  public Long getIntervalMillis() {
+    return this.intervalMillis;
+  }
+
+  public void setIntervalMillis(Long intervalMillis) {
+    this.intervalMillis = intervalMillis;
+  }
+
 }

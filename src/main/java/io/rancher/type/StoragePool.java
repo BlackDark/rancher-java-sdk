@@ -1,236 +1,235 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.List;
+import java.util.Map;
 
 public class StoragePool extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getCredentialsLink() {
-        return this.links.get("credentials");
-    }
-    
-    public String getHostsLink() {
-        return this.links.get("hosts");
-    }
-    
-    public String getImagesLink() {
-        return this.links.get("images");
-    }
-    
-    public String getStorageDriverLink() {
-        return this.links.get("storageDriver");
-    }
-    
-    public String getVolumesLink() {
-        return this.links.get("volumes");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String blockDevicePath;
-    
-    private String created;
-    
-    private String description;
-    
-    private String driverName;
-    
-    private String externalId;
-    
-    private List<String> hostIds;
-    
-    private String kind;
-    
-    private String name;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String storageDriverId;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    private String volumeAccessMode;
-    
-    private List<String> volumeCapabilities;
-    
-    private List<String> volumeIds;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getBlockDevicePath() {
-        return this.blockDevicePath;
-    }
+  public String getCredentialsLink() {
+    return this.links.get("credentials");
+  }
 
-    public void setBlockDevicePath(String blockDevicePath) {
-      this.blockDevicePath = blockDevicePath;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getHostsLink() {
+    return this.links.get("hosts");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getImagesLink() {
+    return this.links.get("images");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getDriverName() {
-        return this.driverName;
-    }
+  public String getStorageDriverLink() {
+    return this.links.get("storageDriver");
+  }
 
-    public void setDriverName(String driverName) {
-      this.driverName = driverName;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  public String getVolumesLink() {
+    return this.links.get("volumes");
+  }
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public List<String> getHostIds() {
-        return this.hostIds;
-    }
 
-    public void setHostIds(List<String> hostIds) {
-      this.hostIds = hostIds;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String accountId;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String blockDevicePath;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String created;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String description;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getStorageDriverId() {
-        return this.storageDriverId;
-    }
+  private String driverName;
 
-    public void setStorageDriverId(String storageDriverId) {
-      this.storageDriverId = storageDriverId;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String externalId;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private List<String> hostIds;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String kind;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String name;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
-    public String getVolumeAccessMode() {
-        return this.volumeAccessMode;
-    }
+  private String removed;
 
-    public void setVolumeAccessMode(String volumeAccessMode) {
-      this.volumeAccessMode = volumeAccessMode;
-    }
-    
-    public List<String> getVolumeCapabilities() {
-        return this.volumeCapabilities;
-    }
+  private String state;
 
-    public void setVolumeCapabilities(List<String> volumeCapabilities) {
-      this.volumeCapabilities = volumeCapabilities;
-    }
-    
-    public List<String> getVolumeIds() {
-        return this.volumeIds;
-    }
+  private String storageDriverId;
 
-    public void setVolumeIds(List<String> volumeIds) {
-      this.volumeIds = volumeIds;
-    }
-    
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  private String volumeAccessMode;
+
+  private List<String> volumeCapabilities;
+
+  private List<String> volumeIds;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getBlockDevicePath() {
+    return this.blockDevicePath;
+  }
+
+  public void setBlockDevicePath(String blockDevicePath) {
+    this.blockDevicePath = blockDevicePath;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getDriverName() {
+    return this.driverName;
+  }
+
+  public void setDriverName(String driverName) {
+    this.driverName = driverName;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public List<String> getHostIds() {
+    return this.hostIds;
+  }
+
+  public void setHostIds(List<String> hostIds) {
+    this.hostIds = hostIds;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getStorageDriverId() {
+    return this.storageDriverId;
+  }
+
+  public void setStorageDriverId(String storageDriverId) {
+    this.storageDriverId = storageDriverId;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
+  public String getVolumeAccessMode() {
+    return this.volumeAccessMode;
+  }
+
+  public void setVolumeAccessMode(String volumeAccessMode) {
+    this.volumeAccessMode = volumeAccessMode;
+  }
+
+  public List<String> getVolumeCapabilities() {
+    return this.volumeCapabilities;
+  }
+
+  public void setVolumeCapabilities(List<String> volumeCapabilities) {
+    this.volumeCapabilities = volumeCapabilities;
+  }
+
+  public List<String> getVolumeIds() {
+    return this.volumeIds;
+  }
+
+  public void setVolumeIds(List<String> volumeIds) {
+    this.volumeIds = volumeIds;
+  }
+
 }

@@ -1,41 +1,40 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ChangeSecretInput extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String newSecret;
-    
-    private String oldSecret;
-    
-    public String getNewSecret() {
-        return this.newSecret;
-    }
 
-    public void setNewSecret(String newSecret) {
-      this.newSecret = newSecret;
-    }
-    
-    public String getOldSecret() {
-        return this.oldSecret;
-    }
+  private String newSecret;
 
-    public void setOldSecret(String oldSecret) {
-      this.oldSecret = oldSecret;
-    }
-    
+  private String oldSecret;
+
+  public String getNewSecret() {
+    return this.newSecret;
+  }
+
+  public void setNewSecret(String newSecret) {
+    this.newSecret = newSecret;
+  }
+
+  public String getOldSecret() {
+    return this.oldSecret;
+  }
+
+  public void setOldSecret(String oldSecret) {
+    this.oldSecret = oldSecret;
+  }
+
 }

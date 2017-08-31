@@ -1,301 +1,299 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.List;
 import java.util.Map;
 
 public class ExternalService extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getInstancesLink() {
-        return this.links.get("instances");
-    }
-    
-    public String getNetworkDriversLink() {
-        return this.links.get("networkDrivers");
-    }
-    
-    public String getServiceExposeMapsLink() {
-        return this.links.get("serviceExposeMaps");
-    }
-    
-    public String getServiceLogsLink() {
-        return this.links.get("serviceLogs");
-    }
-    
-    public String getStackLink() {
-        return this.links.get("stack");
-    }
-    
-    public String getStorageDriversLink() {
-        return this.links.get("storageDrivers");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String created;
-    
-    private String description;
-    
-    private String externalId;
-    
-    private List<String> externalIpAddresses;
-    
-    private String fqdn;
-    
-    private InstanceHealthCheck healthCheck;
-    
-    private String healthState;
-    
-    private String hostname;
-    
-    private List<String> instanceIds;
-    
-    private String kind;
-    
-    private LaunchConfig launchConfig;
-    
-    private Map<String, Object> linkedServices;
-    
-    private Map<String, Object> metadata;
-    
-    private String name;
-    
-    private String removed;
-    
-    private String stackId;
-    
-    private Boolean startOnCreate;
-    
-    private String state;
-    
-    private Boolean system;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private ServiceUpgrade upgrade;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getInstancesLink() {
+    return this.links.get("instances");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getNetworkDriversLink() {
+    return this.links.get("networkDrivers");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  public String getServiceExposeMapsLink() {
+    return this.links.get("serviceExposeMaps");
+  }
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public List<String> getExternalIpAddresses() {
-        return this.externalIpAddresses;
-    }
+  public String getServiceLogsLink() {
+    return this.links.get("serviceLogs");
+  }
 
-    public void setExternalIpAddresses(List<String> externalIpAddresses) {
-      this.externalIpAddresses = externalIpAddresses;
-    }
-    
-    public String getFqdn() {
-        return this.fqdn;
-    }
+  public String getStackLink() {
+    return this.links.get("stack");
+  }
 
-    public void setFqdn(String fqdn) {
-      this.fqdn = fqdn;
-    }
-    
-    public InstanceHealthCheck getHealthCheck() {
-        return this.healthCheck;
-    }
+  public String getStorageDriversLink() {
+    return this.links.get("storageDrivers");
+  }
 
-    public void setHealthCheck(InstanceHealthCheck healthCheck) {
-      this.healthCheck = healthCheck;
-    }
-    
-    public String getHealthState() {
-        return this.healthState;
-    }
 
-    public void setHealthState(String healthState) {
-      this.healthState = healthState;
-    }
-    
-    public String getHostname() {
-        return this.hostname;
-    }
+  private String accountId;
 
-    public void setHostname(String hostname) {
-      this.hostname = hostname;
-    }
-    
-    public List<String> getInstanceIds() {
-        return this.instanceIds;
-    }
+  private String created;
 
-    public void setInstanceIds(List<String> instanceIds) {
-      this.instanceIds = instanceIds;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String description;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public LaunchConfig getLaunchConfig() {
-        return this.launchConfig;
-    }
+  private String externalId;
 
-    public void setLaunchConfig(LaunchConfig launchConfig) {
-      this.launchConfig = launchConfig;
-    }
-    
-    public Map<String, Object> getLinkedServices() {
-        return this.linkedServices;
-    }
+  private List<String> externalIpAddresses;
 
-    public void setLinkedServices(Map<String, Object> linkedServices) {
-      this.linkedServices = linkedServices;
-    }
-    
-    public Map<String, Object> getMetadata() {
-        return this.metadata;
-    }
+  private String fqdn;
 
-    public void setMetadata(Map<String, Object> metadata) {
-      this.metadata = metadata;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private InstanceHealthCheck healthCheck;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String healthState;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getStackId() {
-        return this.stackId;
-    }
+  private String hostname;
 
-    public void setStackId(String stackId) {
-      this.stackId = stackId;
-    }
-    
-    public Boolean getStartOnCreate() {
-        return this.startOnCreate;
-    }
+  private List<String> instanceIds;
 
-    public void setStartOnCreate(Boolean startOnCreate) {
-      this.startOnCreate = startOnCreate;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String kind;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public Boolean getSystem() {
-        return this.system;
-    }
+  private LaunchConfig launchConfig;
 
-    public void setSystem(Boolean system) {
-      this.system = system;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private Map<String, Object> linkedServices;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private Map<String, Object> metadata;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String name;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public ServiceUpgrade getUpgrade() {
-        return this.upgrade;
-    }
+  private String removed;
 
-    public void setUpgrade(ServiceUpgrade upgrade) {
-      this.upgrade = upgrade;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String stackId;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private Boolean startOnCreate;
+
+  private String state;
+
+  private Boolean system;
+
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private ServiceUpgrade upgrade;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public List<String> getExternalIpAddresses() {
+    return this.externalIpAddresses;
+  }
+
+  public void setExternalIpAddresses(List<String> externalIpAddresses) {
+    this.externalIpAddresses = externalIpAddresses;
+  }
+
+  public String getFqdn() {
+    return this.fqdn;
+  }
+
+  public void setFqdn(String fqdn) {
+    this.fqdn = fqdn;
+  }
+
+  public InstanceHealthCheck getHealthCheck() {
+    return this.healthCheck;
+  }
+
+  public void setHealthCheck(InstanceHealthCheck healthCheck) {
+    this.healthCheck = healthCheck;
+  }
+
+  public String getHealthState() {
+    return this.healthState;
+  }
+
+  public void setHealthState(String healthState) {
+    this.healthState = healthState;
+  }
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String hostname) {
+    this.hostname = hostname;
+  }
+
+  public List<String> getInstanceIds() {
+    return this.instanceIds;
+  }
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public LaunchConfig getLaunchConfig() {
+    return this.launchConfig;
+  }
+
+  public void setLaunchConfig(LaunchConfig launchConfig) {
+    this.launchConfig = launchConfig;
+  }
+
+  public Map<String, Object> getLinkedServices() {
+    return this.linkedServices;
+  }
+
+  public void setLinkedServices(Map<String, Object> linkedServices) {
+    this.linkedServices = linkedServices;
+  }
+
+  public Map<String, Object> getMetadata() {
+    return this.metadata;
+  }
+
+  public void setMetadata(Map<String, Object> metadata) {
+    this.metadata = metadata;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getStackId() {
+    return this.stackId;
+  }
+
+  public void setStackId(String stackId) {
+    this.stackId = stackId;
+  }
+
+  public Boolean getStartOnCreate() {
+    return this.startOnCreate;
+  }
+
+  public void setStartOnCreate(Boolean startOnCreate) {
+    this.startOnCreate = startOnCreate;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public Boolean getSystem() {
+    return this.system;
+  }
+
+  public void setSystem(Boolean system) {
+    this.system = system;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public ServiceUpgrade getUpgrade() {
+    return this.upgrade;
+  }
+
+  public void setUpgrade(ServiceUpgrade upgrade) {
+    this.upgrade = upgrade;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

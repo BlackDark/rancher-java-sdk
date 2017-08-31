@@ -1,71 +1,70 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class BlkioDeviceOption extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Integer readBps;
-    
-    private Integer readIops;
-    
-    private Integer weight;
-    
-    private Integer writeBps;
-    
-    private Integer writeIops;
-    
-    public Integer getReadBps() {
-        return this.readBps;
-    }
 
-    public void setReadBps(Integer readBps) {
-      this.readBps = readBps;
-    }
-    
-    public Integer getReadIops() {
-        return this.readIops;
-    }
+  private Long readBps;
 
-    public void setReadIops(Integer readIops) {
-      this.readIops = readIops;
-    }
-    
-    public Integer getWeight() {
-        return this.weight;
-    }
+  private Long readIops;
 
-    public void setWeight(Integer weight) {
-      this.weight = weight;
-    }
-    
-    public Integer getWriteBps() {
-        return this.writeBps;
-    }
+  private Long weight;
 
-    public void setWriteBps(Integer writeBps) {
-      this.writeBps = writeBps;
-    }
-    
-    public Integer getWriteIops() {
-        return this.writeIops;
-    }
+  private Long writeBps;
 
-    public void setWriteIops(Integer writeIops) {
-      this.writeIops = writeIops;
-    }
-    
+  private Long writeIops;
+
+  public Long getReadBps() {
+    return this.readBps;
+  }
+
+  public void setReadBps(Long readBps) {
+    this.readBps = readBps;
+  }
+
+  public Long getReadIops() {
+    return this.readIops;
+  }
+
+  public void setReadIops(Long readIops) {
+    this.readIops = readIops;
+  }
+
+  public Long getWeight() {
+    return this.weight;
+  }
+
+  public void setWeight(Long weight) {
+    this.weight = weight;
+  }
+
+  public Long getWriteBps() {
+    return this.writeBps;
+  }
+
+  public void setWriteBps(Long writeBps) {
+    this.writeBps = writeBps;
+  }
+
+  public Long getWriteIops() {
+    return this.writeIops;
+  }
+
+  public void setWriteIops(Long writeIops) {
+    this.writeIops = writeIops;
+  }
+
 }

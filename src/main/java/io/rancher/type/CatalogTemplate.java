@@ -1,102 +1,100 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.Map;
 
 public class CatalogTemplate extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Map<String, Object> answers;
-    
-    private Binding binding;
-    
-    private String description;
-    
-    private String dockerCompose;
-    
-    private String name;
-    
-    private String rancherCompose;
-    
-    private String templateId;
-    
-    private String templateVersionId;
-    
-    public Map<String, Object> getAnswers() {
-        return this.answers;
-    }
 
-    public void setAnswers(Map<String, Object> answers) {
-      this.answers = answers;
-    }
-    
-    public Binding getBinding() {
-        return this.binding;
-    }
+  private Map<String, Object> answers;
 
-    public void setBinding(Binding binding) {
-      this.binding = binding;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  private Binding binding;
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getDockerCompose() {
-        return this.dockerCompose;
-    }
+  private String description;
 
-    public void setDockerCompose(String dockerCompose) {
-      this.dockerCompose = dockerCompose;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String dockerCompose;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRancherCompose() {
-        return this.rancherCompose;
-    }
+  private String name;
 
-    public void setRancherCompose(String rancherCompose) {
-      this.rancherCompose = rancherCompose;
-    }
-    
-    public String getTemplateId() {
-        return this.templateId;
-    }
+  private String rancherCompose;
 
-    public void setTemplateId(String templateId) {
-      this.templateId = templateId;
-    }
-    
-    public String getTemplateVersionId() {
-        return this.templateVersionId;
-    }
+  private String templateId;
 
-    public void setTemplateVersionId(String templateVersionId) {
-      this.templateVersionId = templateVersionId;
-    }
-    
+  private String templateVersionId;
+
+  public Map<String, Object> getAnswers() {
+    return this.answers;
+  }
+
+  public void setAnswers(Map<String, Object> answers) {
+    this.answers = answers;
+  }
+
+  public Binding getBinding() {
+    return this.binding;
+  }
+
+  public void setBinding(Binding binding) {
+    this.binding = binding;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getDockerCompose() {
+    return this.dockerCompose;
+  }
+
+  public void setDockerCompose(String dockerCompose) {
+    this.dockerCompose = dockerCompose;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRancherCompose() {
+    return this.rancherCompose;
+  }
+
+  public void setRancherCompose(String rancherCompose) {
+    this.rancherCompose = rancherCompose;
+  }
+
+  public String getTemplateId() {
+    return this.templateId;
+  }
+
+  public void setTemplateId(String templateId) {
+    this.templateId = templateId;
+  }
+
+  public String getTemplateVersionId() {
+    return this.templateVersionId;
+  }
+
+  public void setTemplateVersionId(String templateVersionId) {
+    this.templateVersionId = templateVersionId;
+  }
+
 }

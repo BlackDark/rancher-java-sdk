@@ -2,22 +2,10 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.StorageDriver;
-import io.rancher.type.Account;
-import io.rancher.type.Service;
-import io.rancher.type.StoragePool;
-import io.rancher.type.Volume;
-
-import retrofit2.Call;
+import io.rancher.type.*;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface StorageDriverService {
 
@@ -38,28 +26,27 @@ public interface StorageDriverService {
 
   @DELETE("storageDriver/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("storageDriver/{id}?action=activate")
   Call<StorageDriver> activate(@Path("id") String id);
-  
+
   @POST("storageDriver/{id}?action=deactivate")
   Call<StorageDriver> deactivate(@Path("id") String id);
-  
+
   @POST("storageDriver/{id}?action=remove")
   Call<StorageDriver> remove(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<Service> getLinkService(@Url String url );
-  
+  Call<Service> getLinkService(@Url String url);
+
   @GET
-  Call<TypeCollection<StoragePool>> getLinkStoragePools(@Url String url );
-  
+  Call<TypeCollection<StoragePool>> getLinkStoragePools(@Url String url);
+
   @GET
-  Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );
-  
+  Call<TypeCollection<Volume>> getLinkVolumes(@Url String url);
+
 }

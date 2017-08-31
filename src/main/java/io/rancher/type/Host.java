@@ -1,443 +1,441 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.List;
 import java.util.Map;
 
 public class Host extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getContainerEventsLink() {
-        return this.links.get("containerEvents");
-    }
-    
-    public String getHealthcheckInstanceHostMapsLink() {
-        return this.links.get("healthcheckInstanceHostMaps");
-    }
-    
-    public String getHostsLink() {
-        return this.links.get("hosts");
-    }
-    
-    public String getInstancesLink() {
-        return this.links.get("instances");
-    }
-    
-    public String getIpAddressesLink() {
-        return this.links.get("ipAddresses");
-    }
-    
-    public String getPhysicalHostLink() {
-        return this.links.get("physicalHost");
-    }
-    
-    public String getServiceEventsLink() {
-        return this.links.get("serviceEvents");
-    }
-    
-    public String getStoragePoolsLink() {
-        return this.links.get("storagePools");
-    }
-    
-    public String getVolumesLink() {
-        return this.links.get("volumes");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String agentIpAddress;
-    
-    private String agentState;
-    
-    private Amazonec2Config amazonec2Config;
-    
-    private String authCertificateAuthority;
-    
-    private String authKey;
-    
-    private AzureConfig azureConfig;
-    
-    private Integer computeTotal;
-    
-    private String created;
-    
-    private String description;
-    
-    private DigitaloceanConfig digitaloceanConfig;
-    
-    private String dockerVersion;
-    
-    private String driver;
-    
-    private Map<String, Object> engineEnv;
-    
-    private List<String> engineInsecureRegistry;
-    
-    private String engineInstallUrl;
-    
-    private Map<String, Object> engineLabel;
-    
-    private Map<String, Object> engineOpt;
-    
-    private List<String> engineRegistryMirror;
-    
-    private String engineStorageDriver;
-    
-    private String hostname;
-    
-    private Map<String, Object> info;
-    
-    private List<String> instanceIds;
-    
-    private String kind;
-    
-    private Map<String, Object> labels;
-    
-    private Integer localStorageMb;
-    
-    private Integer memory;
-    
-    private Integer milliCpu;
-    
-    private String name;
-    
-    private PacketConfig packetConfig;
-    
-    private String physicalHostId;
-    
-    private List<PublicEndpoint> publicEndpoints;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getAgentIpAddress() {
-        return this.agentIpAddress;
-    }
+  public String getContainerEventsLink() {
+    return this.links.get("containerEvents");
+  }
 
-    public void setAgentIpAddress(String agentIpAddress) {
-      this.agentIpAddress = agentIpAddress;
-    }
-    
-    public String getAgentState() {
-        return this.agentState;
-    }
+  public String getHealthcheckInstanceHostMapsLink() {
+    return this.links.get("healthcheckInstanceHostMaps");
+  }
 
-    public void setAgentState(String agentState) {
-      this.agentState = agentState;
-    }
-    
-    public Amazonec2Config getAmazonec2Config() {
-        return this.amazonec2Config;
-    }
+  public String getHostsLink() {
+    return this.links.get("hosts");
+  }
 
-    public void setAmazonec2Config(Amazonec2Config amazonec2Config) {
-      this.amazonec2Config = amazonec2Config;
-    }
-    
-    public String getAuthCertificateAuthority() {
-        return this.authCertificateAuthority;
-    }
+  public String getInstancesLink() {
+    return this.links.get("instances");
+  }
 
-    public void setAuthCertificateAuthority(String authCertificateAuthority) {
-      this.authCertificateAuthority = authCertificateAuthority;
-    }
-    
-    public String getAuthKey() {
-        return this.authKey;
-    }
+  public String getIpAddressesLink() {
+    return this.links.get("ipAddresses");
+  }
 
-    public void setAuthKey(String authKey) {
-      this.authKey = authKey;
-    }
-    
-    public AzureConfig getAzureConfig() {
-        return this.azureConfig;
-    }
+  public String getPhysicalHostLink() {
+    return this.links.get("physicalHost");
+  }
 
-    public void setAzureConfig(AzureConfig azureConfig) {
-      this.azureConfig = azureConfig;
-    }
-    
-    public Integer getComputeTotal() {
-        return this.computeTotal;
-    }
+  public String getServiceEventsLink() {
+    return this.links.get("serviceEvents");
+  }
 
-    public void setComputeTotal(Integer computeTotal) {
-      this.computeTotal = computeTotal;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getStoragePoolsLink() {
+    return this.links.get("storagePools");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getVolumesLink() {
+    return this.links.get("volumes");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public DigitaloceanConfig getDigitaloceanConfig() {
-        return this.digitaloceanConfig;
-    }
 
-    public void setDigitaloceanConfig(DigitaloceanConfig digitaloceanConfig) {
-      this.digitaloceanConfig = digitaloceanConfig;
-    }
-    
-    public String getDockerVersion() {
-        return this.dockerVersion;
-    }
+  private String accountId;
 
-    public void setDockerVersion(String dockerVersion) {
-      this.dockerVersion = dockerVersion;
-    }
-    
-    public String getDriver() {
-        return this.driver;
-    }
+  private String agentIpAddress;
 
-    public void setDriver(String driver) {
-      this.driver = driver;
-    }
-    
-    public Map<String, Object> getEngineEnv() {
-        return this.engineEnv;
-    }
+  private String agentState;
 
-    public void setEngineEnv(Map<String, Object> engineEnv) {
-      this.engineEnv = engineEnv;
-    }
-    
-    public List<String> getEngineInsecureRegistry() {
-        return this.engineInsecureRegistry;
-    }
+  private Amazonec2Config amazonec2Config;
 
-    public void setEngineInsecureRegistry(List<String> engineInsecureRegistry) {
-      this.engineInsecureRegistry = engineInsecureRegistry;
-    }
-    
-    public String getEngineInstallUrl() {
-        return this.engineInstallUrl;
-    }
+  private String authCertificateAuthority;
 
-    public void setEngineInstallUrl(String engineInstallUrl) {
-      this.engineInstallUrl = engineInstallUrl;
-    }
-    
-    public Map<String, Object> getEngineLabel() {
-        return this.engineLabel;
-    }
+  private String authKey;
 
-    public void setEngineLabel(Map<String, Object> engineLabel) {
-      this.engineLabel = engineLabel;
-    }
-    
-    public Map<String, Object> getEngineOpt() {
-        return this.engineOpt;
-    }
+  private AzureConfig azureConfig;
 
-    public void setEngineOpt(Map<String, Object> engineOpt) {
-      this.engineOpt = engineOpt;
-    }
-    
-    public List<String> getEngineRegistryMirror() {
-        return this.engineRegistryMirror;
-    }
+  private Long computeTotal;
 
-    public void setEngineRegistryMirror(List<String> engineRegistryMirror) {
-      this.engineRegistryMirror = engineRegistryMirror;
-    }
-    
-    public String getEngineStorageDriver() {
-        return this.engineStorageDriver;
-    }
+  private String created;
 
-    public void setEngineStorageDriver(String engineStorageDriver) {
-      this.engineStorageDriver = engineStorageDriver;
-    }
-    
-    public String getHostname() {
-        return this.hostname;
-    }
+  private String description;
 
-    public void setHostname(String hostname) {
-      this.hostname = hostname;
-    }
-    
-    public Map<String, Object> getInfo() {
-        return this.info;
-    }
+  private DigitaloceanConfig digitaloceanConfig;
 
-    public void setInfo(Map<String, Object> info) {
-      this.info = info;
-    }
-    
-    public List<String> getInstanceIds() {
-        return this.instanceIds;
-    }
+  private String dockerVersion;
 
-    public void setInstanceIds(List<String> instanceIds) {
-      this.instanceIds = instanceIds;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String driver;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public Map<String, Object> getLabels() {
-        return this.labels;
-    }
+  private Map<String, Object> engineEnv;
 
-    public void setLabels(Map<String, Object> labels) {
-      this.labels = labels;
-    }
-    
-    public Integer getLocalStorageMb() {
-        return this.localStorageMb;
-    }
+  private List<String> engineInsecureRegistry;
 
-    public void setLocalStorageMb(Integer localStorageMb) {
-      this.localStorageMb = localStorageMb;
-    }
-    
-    public Integer getMemory() {
-        return this.memory;
-    }
+  private String engineInstallUrl;
 
-    public void setMemory(Integer memory) {
-      this.memory = memory;
-    }
-    
-    public Integer getMilliCpu() {
-        return this.milliCpu;
-    }
+  private Map<String, Object> engineLabel;
 
-    public void setMilliCpu(Integer milliCpu) {
-      this.milliCpu = milliCpu;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private Map<String, Object> engineOpt;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public PacketConfig getPacketConfig() {
-        return this.packetConfig;
-    }
+  private List<String> engineRegistryMirror;
 
-    public void setPacketConfig(PacketConfig packetConfig) {
-      this.packetConfig = packetConfig;
-    }
-    
-    public String getPhysicalHostId() {
-        return this.physicalHostId;
-    }
+  private String engineStorageDriver;
 
-    public void setPhysicalHostId(String physicalHostId) {
-      this.physicalHostId = physicalHostId;
-    }
-    
-    public List<PublicEndpoint> getPublicEndpoints() {
-        return this.publicEndpoints;
-    }
+  private String hostname;
 
-    public void setPublicEndpoints(List<PublicEndpoint> publicEndpoints) {
-      this.publicEndpoints = publicEndpoints;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private Map<String, Object> info;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private List<String> instanceIds;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String kind;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private Map<String, Object> labels;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private Long localStorageMb;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private Long memory;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private Long milliCpu;
+
+  private String name;
+
+  private PacketConfig packetConfig;
+
+  private String physicalHostId;
+
+  private List<PublicEndpoint> publicEndpoints;
+
+  private String removed;
+
+  private String state;
+
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getAgentIpAddress() {
+    return this.agentIpAddress;
+  }
+
+  public void setAgentIpAddress(String agentIpAddress) {
+    this.agentIpAddress = agentIpAddress;
+  }
+
+  public String getAgentState() {
+    return this.agentState;
+  }
+
+  public void setAgentState(String agentState) {
+    this.agentState = agentState;
+  }
+
+  public Amazonec2Config getAmazonec2Config() {
+    return this.amazonec2Config;
+  }
+
+  public void setAmazonec2Config(Amazonec2Config amazonec2Config) {
+    this.amazonec2Config = amazonec2Config;
+  }
+
+  public String getAuthCertificateAuthority() {
+    return this.authCertificateAuthority;
+  }
+
+  public void setAuthCertificateAuthority(String authCertificateAuthority) {
+    this.authCertificateAuthority = authCertificateAuthority;
+  }
+
+  public String getAuthKey() {
+    return this.authKey;
+  }
+
+  public void setAuthKey(String authKey) {
+    this.authKey = authKey;
+  }
+
+  public AzureConfig getAzureConfig() {
+    return this.azureConfig;
+  }
+
+  public void setAzureConfig(AzureConfig azureConfig) {
+    this.azureConfig = azureConfig;
+  }
+
+  public Long getComputeTotal() {
+    return this.computeTotal;
+  }
+
+  public void setComputeTotal(Long computeTotal) {
+    this.computeTotal = computeTotal;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public DigitaloceanConfig getDigitaloceanConfig() {
+    return this.digitaloceanConfig;
+  }
+
+  public void setDigitaloceanConfig(DigitaloceanConfig digitaloceanConfig) {
+    this.digitaloceanConfig = digitaloceanConfig;
+  }
+
+  public String getDockerVersion() {
+    return this.dockerVersion;
+  }
+
+  public void setDockerVersion(String dockerVersion) {
+    this.dockerVersion = dockerVersion;
+  }
+
+  public String getDriver() {
+    return this.driver;
+  }
+
+  public void setDriver(String driver) {
+    this.driver = driver;
+  }
+
+  public Map<String, Object> getEngineEnv() {
+    return this.engineEnv;
+  }
+
+  public void setEngineEnv(Map<String, Object> engineEnv) {
+    this.engineEnv = engineEnv;
+  }
+
+  public List<String> getEngineInsecureRegistry() {
+    return this.engineInsecureRegistry;
+  }
+
+  public void setEngineInsecureRegistry(List<String> engineInsecureRegistry) {
+    this.engineInsecureRegistry = engineInsecureRegistry;
+  }
+
+  public String getEngineInstallUrl() {
+    return this.engineInstallUrl;
+  }
+
+  public void setEngineInstallUrl(String engineInstallUrl) {
+    this.engineInstallUrl = engineInstallUrl;
+  }
+
+  public Map<String, Object> getEngineLabel() {
+    return this.engineLabel;
+  }
+
+  public void setEngineLabel(Map<String, Object> engineLabel) {
+    this.engineLabel = engineLabel;
+  }
+
+  public Map<String, Object> getEngineOpt() {
+    return this.engineOpt;
+  }
+
+  public void setEngineOpt(Map<String, Object> engineOpt) {
+    this.engineOpt = engineOpt;
+  }
+
+  public List<String> getEngineRegistryMirror() {
+    return this.engineRegistryMirror;
+  }
+
+  public void setEngineRegistryMirror(List<String> engineRegistryMirror) {
+    this.engineRegistryMirror = engineRegistryMirror;
+  }
+
+  public String getEngineStorageDriver() {
+    return this.engineStorageDriver;
+  }
+
+  public void setEngineStorageDriver(String engineStorageDriver) {
+    this.engineStorageDriver = engineStorageDriver;
+  }
+
+  public String getHostname() {
+    return this.hostname;
+  }
+
+  public void setHostname(String hostname) {
+    this.hostname = hostname;
+  }
+
+  public Map<String, Object> getInfo() {
+    return this.info;
+  }
+
+  public void setInfo(Map<String, Object> info) {
+    this.info = info;
+  }
+
+  public List<String> getInstanceIds() {
+    return this.instanceIds;
+  }
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public Map<String, Object> getLabels() {
+    return this.labels;
+  }
+
+  public void setLabels(Map<String, Object> labels) {
+    this.labels = labels;
+  }
+
+  public Long getLocalStorageMb() {
+    return this.localStorageMb;
+  }
+
+  public void setLocalStorageMb(Long localStorageMb) {
+    this.localStorageMb = localStorageMb;
+  }
+
+  public Long getMemory() {
+    return this.memory;
+  }
+
+  public void setMemory(Long memory) {
+    this.memory = memory;
+  }
+
+  public Long getMilliCpu() {
+    return this.milliCpu;
+  }
+
+  public void setMilliCpu(Long milliCpu) {
+    this.milliCpu = milliCpu;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public PacketConfig getPacketConfig() {
+    return this.packetConfig;
+  }
+
+  public void setPacketConfig(PacketConfig packetConfig) {
+    this.packetConfig = packetConfig;
+  }
+
+  public String getPhysicalHostId() {
+    return this.physicalHostId;
+  }
+
+  public void setPhysicalHostId(String physicalHostId) {
+    this.physicalHostId = physicalHostId;
+  }
+
+  public List<PublicEndpoint> getPublicEndpoints() {
+    return this.publicEndpoints;
+  }
+
+  public void setPublicEndpoints(List<PublicEndpoint> publicEndpoints) {
+    this.publicEndpoints = publicEndpoints;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

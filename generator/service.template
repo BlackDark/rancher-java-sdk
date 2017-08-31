@@ -5,6 +5,7 @@ import io.rancher.base.TypeCollection;
 import io.rancher.type.{{$.class}};{{range $import := .meta.ListActionImports}}
 import {{$import}};{{end}}
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.http.Body;
@@ -34,7 +35,7 @@ public interface {{.class}}Service {
   Call<{{.class}}> update(@Path("id") String id, @Body {{.class}} {{.type}});
 
   @DELETE("{{.type}}/{id}")
-  Call<Response> delete(@Path("id") String id);
+  Call<ResponseBody> delete(@Path("id") String id);
   {{range $key, $value := .resourceActions}}
   @POST("{{$.type}}/{id}?action={{$key}}"){{if eq $value.Input "" }}
   Call<{{.Output | capitalize}}> {{$key}}(@Path("id") String id);

@@ -1,91 +1,90 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class LoadBalancerCookieStickinessPolicy extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String cookie;
-    
-    private String domain;
-    
-    private Boolean indirect;
-    
-    private String mode;
-    
-    private String name;
-    
-    private Boolean nocache;
-    
-    private Boolean postonly;
-    
-    public String getCookie() {
-        return this.cookie;
-    }
 
-    public void setCookie(String cookie) {
-      this.cookie = cookie;
-    }
-    
-    public String getDomain() {
-        return this.domain;
-    }
+  private String cookie;
 
-    public void setDomain(String domain) {
-      this.domain = domain;
-    }
-    
-    public Boolean getIndirect() {
-        return this.indirect;
-    }
+  private String domain;
 
-    public void setIndirect(Boolean indirect) {
-      this.indirect = indirect;
-    }
-    
-    public String getMode() {
-        return this.mode;
-    }
+  private Boolean indirect;
 
-    public void setMode(String mode) {
-      this.mode = mode;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String mode;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public Boolean getNocache() {
-        return this.nocache;
-    }
+  private String name;
 
-    public void setNocache(Boolean nocache) {
-      this.nocache = nocache;
-    }
-    
-    public Boolean getPostonly() {
-        return this.postonly;
-    }
+  private Boolean nocache;
 
-    public void setPostonly(Boolean postonly) {
-      this.postonly = postonly;
-    }
-    
+  private Boolean postonly;
+
+  public String getCookie() {
+    return this.cookie;
+  }
+
+  public void setCookie(String cookie) {
+    this.cookie = cookie;
+  }
+
+  public String getDomain() {
+    return this.domain;
+  }
+
+  public void setDomain(String domain) {
+    this.domain = domain;
+  }
+
+  public Boolean getIndirect() {
+    return this.indirect;
+  }
+
+  public void setIndirect(Boolean indirect) {
+    this.indirect = indirect;
+  }
+
+  public String getMode() {
+    return this.mode;
+  }
+
+  public void setMode(String mode) {
+    this.mode = mode;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Boolean getNocache() {
+    return this.nocache;
+  }
+
+  public void setNocache(Boolean nocache) {
+    this.nocache = nocache;
+  }
+
+  public Boolean getPostonly() {
+    return this.postonly;
+  }
+
+  public void setPostonly(Boolean postonly) {
+    this.postonly = postonly;
+  }
+
 }

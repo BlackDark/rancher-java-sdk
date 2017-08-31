@@ -2,21 +2,13 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.ServiceConsumeMap;
 import io.rancher.type.Account;
 import io.rancher.type.InstanceLink;
 import io.rancher.type.Service;
-
-import retrofit2.Call;
+import io.rancher.type.ServiceConsumeMap;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface ServiceConsumeMapService {
 
@@ -37,19 +29,18 @@ public interface ServiceConsumeMapService {
 
   @DELETE("serviceConsumeMap/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("serviceConsumeMap/{id}?action=remove")
   Call<ServiceConsumeMap> remove(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url );
-  
+  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url);
+
   @GET
-  Call<Service> getLinkService(@Url String url );
-  
+  Call<Service> getLinkService(@Url String url);
+
 }

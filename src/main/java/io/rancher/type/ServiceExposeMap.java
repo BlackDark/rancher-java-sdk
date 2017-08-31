@@ -1,183 +1,182 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ServiceExposeMap extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getInstanceLink() {
-        return this.links.get("instance");
-    }
-    
-    public String getServiceLink() {
-        return this.links.get("service");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String created;
-    
-    private String description;
-    
-    private String instanceId;
-    
-    private String ipAddress;
-    
-    private String kind;
-    
-    private Boolean managed;
-    
-    private String name;
-    
-    private String removed;
-    
-    private String serviceId;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getInstanceLink() {
+    return this.links.get("instance");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getServiceLink() {
+    return this.links.get("service");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getInstanceId() {
-        return this.instanceId;
-    }
 
-    public void setInstanceId(String instanceId) {
-      this.instanceId = instanceId;
-    }
-    
-    public String getIpAddress() {
-        return this.ipAddress;
-    }
+  private String accountId;
 
-    public void setIpAddress(String ipAddress) {
-      this.ipAddress = ipAddress;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String created;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public Boolean getManaged() {
-        return this.managed;
-    }
+  private String description;
 
-    public void setManaged(Boolean managed) {
-      this.managed = managed;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String instanceId;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String ipAddress;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getServiceId() {
-        return this.serviceId;
-    }
+  private String kind;
 
-    public void setServiceId(String serviceId) {
-      this.serviceId = serviceId;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private Boolean managed;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String name;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String removed;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String serviceId;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String state;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getInstanceId() {
+    return this.instanceId;
+  }
+
+  public void setInstanceId(String instanceId) {
+    this.instanceId = instanceId;
+  }
+
+  public String getIpAddress() {
+    return this.ipAddress;
+  }
+
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public Boolean getManaged() {
+    return this.managed;
+  }
+
+  public void setManaged(Boolean managed) {
+    this.managed = managed;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getServiceId() {
+    return this.serviceId;
+  }
+
+  public void setServiceId(String serviceId) {
+    this.serviceId = serviceId;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

@@ -1,165 +1,164 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class AuditLog extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String authType;
-    
-    private String authenticatedAsAccountId;
-    
-    private String authenticatedAsIdentityId;
-    
-    private String clientIp;
-    
-    private String created;
-    
-    private String description;
-    
-    private String eventType;
-    
-    private String kind;
-    
-    private String requestObject;
-    
-    private Integer resourceId;
-    
-    private String resourceType;
-    
-    private String responseCode;
-    
-    private String responseObject;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getAuthType() {
-        return this.authType;
-    }
 
-    public void setAuthType(String authType) {
-      this.authType = authType;
-    }
-    
-    public String getAuthenticatedAsAccountId() {
-        return this.authenticatedAsAccountId;
-    }
+  private String accountId;
 
-    public void setAuthenticatedAsAccountId(String authenticatedAsAccountId) {
-      this.authenticatedAsAccountId = authenticatedAsAccountId;
-    }
-    
-    public String getAuthenticatedAsIdentityId() {
-        return this.authenticatedAsIdentityId;
-    }
+  private String authType;
 
-    public void setAuthenticatedAsIdentityId(String authenticatedAsIdentityId) {
-      this.authenticatedAsIdentityId = authenticatedAsIdentityId;
-    }
-    
-    public String getClientIp() {
-        return this.clientIp;
-    }
+  private String authenticatedAsAccountId;
 
-    public void setClientIp(String clientIp) {
-      this.clientIp = clientIp;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  private String authenticatedAsIdentityId;
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  private String clientIp;
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getEventType() {
-        return this.eventType;
-    }
+  private String created;
 
-    public void setEventType(String eventType) {
-      this.eventType = eventType;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String description;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getRequestObject() {
-        return this.requestObject;
-    }
+  private String eventType;
 
-    public void setRequestObject(String requestObject) {
-      this.requestObject = requestObject;
-    }
-    
-    public Integer getResourceId() {
-        return this.resourceId;
-    }
+  private String kind;
 
-    public void setResourceId(Integer resourceId) {
-      this.resourceId = resourceId;
-    }
-    
-    public String getResourceType() {
-        return this.resourceType;
-    }
+  private String requestObject;
 
-    public void setResourceType(String resourceType) {
-      this.resourceType = resourceType;
-    }
-    
-    public String getResponseCode() {
-        return this.responseCode;
-    }
+  private Long resourceId;
 
-    public void setResponseCode(String responseCode) {
-      this.responseCode = responseCode;
-    }
-    
-    public String getResponseObject() {
-        return this.responseObject;
-    }
+  private String resourceType;
 
-    public void setResponseObject(String responseObject) {
-      this.responseObject = responseObject;
-    }
-    
+  private String responseCode;
+
+  private String responseObject;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getAuthType() {
+    return this.authType;
+  }
+
+  public void setAuthType(String authType) {
+    this.authType = authType;
+  }
+
+  public String getAuthenticatedAsAccountId() {
+    return this.authenticatedAsAccountId;
+  }
+
+  public void setAuthenticatedAsAccountId(String authenticatedAsAccountId) {
+    this.authenticatedAsAccountId = authenticatedAsAccountId;
+  }
+
+  public String getAuthenticatedAsIdentityId() {
+    return this.authenticatedAsIdentityId;
+  }
+
+  public void setAuthenticatedAsIdentityId(String authenticatedAsIdentityId) {
+    this.authenticatedAsIdentityId = authenticatedAsIdentityId;
+  }
+
+  public String getClientIp() {
+    return this.clientIp;
+  }
+
+  public void setClientIp(String clientIp) {
+    this.clientIp = clientIp;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getEventType() {
+    return this.eventType;
+  }
+
+  public void setEventType(String eventType) {
+    this.eventType = eventType;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getRequestObject() {
+    return this.requestObject;
+  }
+
+  public void setRequestObject(String requestObject) {
+    this.requestObject = requestObject;
+  }
+
+  public Long getResourceId() {
+    return this.resourceId;
+  }
+
+  public void setResourceId(Long resourceId) {
+    this.resourceId = resourceId;
+  }
+
+  public String getResourceType() {
+    return this.resourceType;
+  }
+
+  public void setResourceType(String resourceType) {
+    this.resourceType = resourceType;
+  }
+
+  public String getResponseCode() {
+    return this.responseCode;
+  }
+
+  public void setResponseCode(String responseCode) {
+    this.responseCode = responseCode;
+  }
+
+  public String getResponseObject() {
+    return this.responseObject;
+  }
+
+  public void setResponseObject(String responseObject) {
+    this.responseObject = responseObject;
+  }
+
 }

@@ -1,251 +1,249 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.List;
 import java.util.Map;
 
 public class KubernetesService extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getInstancesLink() {
-        return this.links.get("instances");
-    }
-    
-    public String getNetworkDriversLink() {
-        return this.links.get("networkDrivers");
-    }
-    
-    public String getServiceExposeMapsLink() {
-        return this.links.get("serviceExposeMaps");
-    }
-    
-    public String getServiceLogsLink() {
-        return this.links.get("serviceLogs");
-    }
-    
-    public String getStackLink() {
-        return this.links.get("stack");
-    }
-    
-    public String getStorageDriversLink() {
-        return this.links.get("storageDrivers");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String created;
-    
-    private String description;
-    
-    private String externalId;
-    
-    private String healthState;
-    
-    private List<String> instanceIds;
-    
-    private String kind;
-    
-    private Map<String, Object> linkedServices;
-    
-    private String name;
-    
-    private String removed;
-    
-    private String selectorContainer;
-    
-    private String stackId;
-    
-    private String state;
-    
-    private Boolean system;
-    
-    private Map<String, Object> template;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    private String vip;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getInstancesLink() {
+    return this.links.get("instances");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getNetworkDriversLink() {
+    return this.links.get("networkDrivers");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  public String getServiceExposeMapsLink() {
+    return this.links.get("serviceExposeMaps");
+  }
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getHealthState() {
-        return this.healthState;
-    }
+  public String getServiceLogsLink() {
+    return this.links.get("serviceLogs");
+  }
 
-    public void setHealthState(String healthState) {
-      this.healthState = healthState;
-    }
-    
-    public List<String> getInstanceIds() {
-        return this.instanceIds;
-    }
+  public String getStackLink() {
+    return this.links.get("stack");
+  }
 
-    public void setInstanceIds(List<String> instanceIds) {
-      this.instanceIds = instanceIds;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  public String getStorageDriversLink() {
+    return this.links.get("storageDrivers");
+  }
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public Map<String, Object> getLinkedServices() {
-        return this.linkedServices;
-    }
 
-    public void setLinkedServices(Map<String, Object> linkedServices) {
-      this.linkedServices = linkedServices;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String accountId;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String created;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getSelectorContainer() {
-        return this.selectorContainer;
-    }
+  private String description;
 
-    public void setSelectorContainer(String selectorContainer) {
-      this.selectorContainer = selectorContainer;
-    }
-    
-    public String getStackId() {
-        return this.stackId;
-    }
+  private String externalId;
 
-    public void setStackId(String stackId) {
-      this.stackId = stackId;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String healthState;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public Boolean getSystem() {
-        return this.system;
-    }
+  private List<String> instanceIds;
 
-    public void setSystem(Boolean system) {
-      this.system = system;
-    }
-    
-    public Map<String, Object> getTemplate() {
-        return this.template;
-    }
+  private String kind;
 
-    public void setTemplate(Map<String, Object> template) {
-      this.template = template;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private Map<String, Object> linkedServices;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String name;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String removed;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String selectorContainer;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
-    public String getVip() {
-        return this.vip;
-    }
+  private String stackId;
 
-    public void setVip(String vip) {
-      this.vip = vip;
-    }
-    
+  private String state;
+
+  private Boolean system;
+
+  private Map<String, Object> template;
+
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  private String vip;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public String getHealthState() {
+    return this.healthState;
+  }
+
+  public void setHealthState(String healthState) {
+    this.healthState = healthState;
+  }
+
+  public List<String> getInstanceIds() {
+    return this.instanceIds;
+  }
+
+  public void setInstanceIds(List<String> instanceIds) {
+    this.instanceIds = instanceIds;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public Map<String, Object> getLinkedServices() {
+    return this.linkedServices;
+  }
+
+  public void setLinkedServices(Map<String, Object> linkedServices) {
+    this.linkedServices = linkedServices;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getSelectorContainer() {
+    return this.selectorContainer;
+  }
+
+  public void setSelectorContainer(String selectorContainer) {
+    this.selectorContainer = selectorContainer;
+  }
+
+  public String getStackId() {
+    return this.stackId;
+  }
+
+  public void setStackId(String stackId) {
+    this.stackId = stackId;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public Boolean getSystem() {
+    return this.system;
+  }
+
+  public void setSystem(Boolean system) {
+    this.system = system;
+  }
+
+  public Map<String, Object> getTemplate() {
+    return this.template;
+  }
+
+  public void setTemplate(Map<String, Object> template) {
+    this.template = template;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
+  public String getVip() {
+    return this.vip;
+  }
+
+  public void setVip(String vip) {
+    this.vip = vip;
+  }
+
 }

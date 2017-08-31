@@ -2,38 +2,10 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.SecondaryLaunchConfig;
-import io.rancher.type.Account;
-import io.rancher.type.ContainerExec;
-import io.rancher.type.ContainerProxy;
-import io.rancher.type.Credential;
-import io.rancher.type.HealthcheckInstanceHostMap;
-import io.rancher.type.Host;
-import io.rancher.type.HostAccess;
-import io.rancher.type.Instance;
-import io.rancher.type.InstanceConsole;
-import io.rancher.type.InstanceConsoleInput;
-import io.rancher.type.InstanceLink;
-import io.rancher.type.InstanceStop;
-import io.rancher.type.Mount;
-import io.rancher.type.Port;
-import io.rancher.type.RegistryCredential;
-import io.rancher.type.Service;
-import io.rancher.type.ServiceEvent;
-import io.rancher.type.ServiceExposeMap;
-import io.rancher.type.ServiceLog;
-import io.rancher.type.Volume;
-
-import retrofit2.Call;
+import io.rancher.type.*;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface SecondaryLaunchConfigService {
 
@@ -54,97 +26,96 @@ public interface SecondaryLaunchConfigService {
 
   @DELETE("secondaryLaunchConfig/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=allocate")
   Call<Instance> allocate(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=console")
   Call<InstanceConsole> console(@Path("id") String id, @Body InstanceConsoleInput instanceConsoleInput);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=deallocate")
   Call<Instance> deallocate(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=error")
   Call<Instance> error(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=execute")
   Call<HostAccess> execute(@Path("id") String id, @Body ContainerExec containerExec);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=migrate")
   Call<Instance> migrate(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=proxy")
   Call<HostAccess> proxy(@Path("id") String id, @Body ContainerProxy containerProxy);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=purge")
   Call<Instance> purge(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=remove")
   Call<Instance> remove(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=restart")
   Call<Instance> restart(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=restore")
   Call<Instance> restore(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=start")
   Call<Instance> start(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=stop")
   Call<Instance> stop(@Path("id") String id, @Body InstanceStop instanceStop);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=updatehealthy")
   Call<Instance> updatehealthy(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=updatereinitializing")
   Call<Instance> updatereinitializing(@Path("id") String id);
-  
+
   @POST("secondaryLaunchConfig/{id}?action=updateunhealthy")
   Call<Instance> updateunhealthy(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<Credential>> getLinkCredentials(@Url String url );
-  
+  Call<TypeCollection<Credential>> getLinkCredentials(@Url String url);
+
   @GET
-  Call<TypeCollection<HealthcheckInstanceHostMap>> getLinkHealthcheckInstanceHostMaps(@Url String url );
-  
+  Call<TypeCollection<HealthcheckInstanceHostMap>> getLinkHealthcheckInstanceHostMaps(@Url String url);
+
   @GET
-  Call<TypeCollection<Host>> getLinkHosts(@Url String url );
-  
+  Call<TypeCollection<Host>> getLinkHosts(@Url String url);
+
   @GET
-  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url );
-  
+  Call<TypeCollection<InstanceLink>> getLinkInstanceLinks(@Url String url);
+
   @GET
-  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
-  
+  Call<TypeCollection<Instance>> getLinkInstances(@Url String url);
+
   @GET
-  Call<TypeCollection<Mount>> getLinkMounts(@Url String url );
-  
+  Call<TypeCollection<Mount>> getLinkMounts(@Url String url);
+
   @GET
-  Call<TypeCollection<Port>> getLinkPorts(@Url String url );
-  
+  Call<TypeCollection<Port>> getLinkPorts(@Url String url);
+
   @GET
-  Call<RegistryCredential> getLinkRegistryCredential(@Url String url );
-  
+  Call<RegistryCredential> getLinkRegistryCredential(@Url String url);
+
   @GET
-  Call<TypeCollection<ServiceEvent>> getLinkServiceEvents(@Url String url );
-  
+  Call<TypeCollection<ServiceEvent>> getLinkServiceEvents(@Url String url);
+
   @GET
-  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url );
-  
+  Call<TypeCollection<ServiceExposeMap>> getLinkServiceExposeMaps(@Url String url);
+
   @GET
-  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url );
-  
+  Call<TypeCollection<ServiceLog>> getLinkServiceLogs(@Url String url);
+
   @GET
-  Call<TypeCollection<Service>> getLinkServices(@Url String url );
-  
+  Call<TypeCollection<Service>> getLinkServices(@Url String url);
+
   @GET
-  Call<TypeCollection<Volume>> getLinkVolumes(@Url String url );
-  
+  Call<TypeCollection<Volume>> getLinkVolumes(@Url String url);
+
 }

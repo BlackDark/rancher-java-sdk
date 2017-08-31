@@ -1,191 +1,190 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class MachineDriver extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Boolean activateOnCreate;
-    
-    private Boolean builtin;
-    
-    private String checksum;
-    
-    private String created;
-    
-    private Boolean defaultActive;
-    
-    private String description;
-    
-    private String externalId;
-    
-    private String kind;
-    
-    private String name;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uiUrl;
-    
-    private String url;
-    
-    private String uuid;
-    
-    public Boolean getActivateOnCreate() {
-        return this.activateOnCreate;
-    }
 
-    public void setActivateOnCreate(Boolean activateOnCreate) {
-      this.activateOnCreate = activateOnCreate;
-    }
-    
-    public Boolean getBuiltin() {
-        return this.builtin;
-    }
+  private Boolean activateOnCreate;
 
-    public void setBuiltin(Boolean builtin) {
-      this.builtin = builtin;
-    }
-    
-    public String getChecksum() {
-        return this.checksum;
-    }
+  private Boolean builtin;
 
-    public void setChecksum(String checksum) {
-      this.checksum = checksum;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  private String checksum;
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public Boolean getDefaultActive() {
-        return this.defaultActive;
-    }
+  private String created;
 
-    public void setDefaultActive(Boolean defaultActive) {
-      this.defaultActive = defaultActive;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  private Boolean defaultActive;
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  private String description;
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String externalId;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String kind;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String name;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String removed;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String state;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String transitioning;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String transitioningMessage;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUiUrl() {
-        return this.uiUrl;
-    }
+  private Long transitioningProgress;
 
-    public void setUiUrl(String uiUrl) {
-      this.uiUrl = uiUrl;
-    }
-    
-    public String getUrl() {
-        return this.url;
-    }
+  private String uiUrl;
 
-    public void setUrl(String url) {
-      this.url = url;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String url;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private String uuid;
+
+  public Boolean getActivateOnCreate() {
+    return this.activateOnCreate;
+  }
+
+  public void setActivateOnCreate(Boolean activateOnCreate) {
+    this.activateOnCreate = activateOnCreate;
+  }
+
+  public Boolean getBuiltin() {
+    return this.builtin;
+  }
+
+  public void setBuiltin(Boolean builtin) {
+    this.builtin = builtin;
+  }
+
+  public String getChecksum() {
+    return this.checksum;
+  }
+
+  public void setChecksum(String checksum) {
+    this.checksum = checksum;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public Boolean getDefaultActive() {
+    return this.defaultActive;
+  }
+
+  public void setDefaultActive(Boolean defaultActive) {
+    this.defaultActive = defaultActive;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUiUrl() {
+    return this.uiUrl;
+  }
+
+  public void setUiUrl(String uiUrl) {
+    this.uiUrl = uiUrl;
+  }
+
+  public String getUrl() {
+    return this.url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

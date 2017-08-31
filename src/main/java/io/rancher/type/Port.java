@@ -1,209 +1,208 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class Port extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getInstanceLink() {
-        return this.links.get("instance");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String bindAddress;
-    
-    private String created;
-    
-    private String description;
-    
-    private String instanceId;
-    
-    private String kind;
-    
-    private String name;
-    
-    private String privateIpAddressId;
-    
-    private Integer privatePort;
-    
-    private String protocol;
-    
-    private String publicIpAddressId;
-    
-    private Integer publicPort;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getBindAddress() {
-        return this.bindAddress;
-    }
+  public String getInstanceLink() {
+    return this.links.get("instance");
+  }
 
-    public void setBindAddress(String bindAddress) {
-      this.bindAddress = bindAddress;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  private String accountId;
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getInstanceId() {
-        return this.instanceId;
-    }
+  private String bindAddress;
 
-    public void setInstanceId(String instanceId) {
-      this.instanceId = instanceId;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String created;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String description;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getPrivateIpAddressId() {
-        return this.privateIpAddressId;
-    }
+  private String instanceId;
 
-    public void setPrivateIpAddressId(String privateIpAddressId) {
-      this.privateIpAddressId = privateIpAddressId;
-    }
-    
-    public Integer getPrivatePort() {
-        return this.privatePort;
-    }
+  private String kind;
 
-    public void setPrivatePort(Integer privatePort) {
-      this.privatePort = privatePort;
-    }
-    
-    public String getProtocol() {
-        return this.protocol;
-    }
+  private String name;
 
-    public void setProtocol(String protocol) {
-      this.protocol = protocol;
-    }
-    
-    public String getPublicIpAddressId() {
-        return this.publicIpAddressId;
-    }
+  private String privateIpAddressId;
 
-    public void setPublicIpAddressId(String publicIpAddressId) {
-      this.publicIpAddressId = publicIpAddressId;
-    }
-    
-    public Integer getPublicPort() {
-        return this.publicPort;
-    }
+  private Long privatePort;
 
-    public void setPublicPort(Integer publicPort) {
-      this.publicPort = publicPort;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String protocol;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String publicIpAddressId;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private Long publicPort;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String removed;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String state;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String transitioning;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getBindAddress() {
+    return this.bindAddress;
+  }
+
+  public void setBindAddress(String bindAddress) {
+    this.bindAddress = bindAddress;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getInstanceId() {
+    return this.instanceId;
+  }
+
+  public void setInstanceId(String instanceId) {
+    this.instanceId = instanceId;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getPrivateIpAddressId() {
+    return this.privateIpAddressId;
+  }
+
+  public void setPrivateIpAddressId(String privateIpAddressId) {
+    this.privateIpAddressId = privateIpAddressId;
+  }
+
+  public Long getPrivatePort() {
+    return this.privatePort;
+  }
+
+  public void setPrivatePort(Long privatePort) {
+    this.privatePort = privatePort;
+  }
+
+  public String getProtocol() {
+    return this.protocol;
+  }
+
+  public void setProtocol(String protocol) {
+    this.protocol = protocol;
+  }
+
+  public String getPublicIpAddressId() {
+    return this.publicIpAddressId;
+  }
+
+  public void setPublicIpAddressId(String publicIpAddressId) {
+    this.publicIpAddressId = publicIpAddressId;
+  }
+
+  public Long getPublicPort() {
+    return this.publicPort;
+  }
+
+  public void setPublicPort(Long publicPort) {
+    this.publicPort = publicPort;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

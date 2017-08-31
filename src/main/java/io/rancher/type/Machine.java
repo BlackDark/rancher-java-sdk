@@ -1,311 +1,309 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.List;
 import java.util.Map;
 
 public class Machine extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getHostsLink() {
-        return this.links.get("hosts");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private Amazonec2Config amazonec2Config;
-    
-    private String authCertificateAuthority;
-    
-    private String authKey;
-    
-    private AzureConfig azureConfig;
-    
-    private String created;
-    
-    private String description;
-    
-    private DigitaloceanConfig digitaloceanConfig;
-    
-    private String dockerVersion;
-    
-    private String driver;
-    
-    private Map<String, Object> engineEnv;
-    
-    private List<String> engineInsecureRegistry;
-    
-    private String engineInstallUrl;
-    
-    private Map<String, Object> engineLabel;
-    
-    private Map<String, Object> engineOpt;
-    
-    private List<String> engineRegistryMirror;
-    
-    private String engineStorageDriver;
-    
-    private String externalId;
-    
-    private String kind;
-    
-    private Map<String, Object> labels;
-    
-    private String name;
-    
-    private PacketConfig packetConfig;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public Amazonec2Config getAmazonec2Config() {
-        return this.amazonec2Config;
-    }
+  public String getHostsLink() {
+    return this.links.get("hosts");
+  }
 
-    public void setAmazonec2Config(Amazonec2Config amazonec2Config) {
-      this.amazonec2Config = amazonec2Config;
-    }
-    
-    public String getAuthCertificateAuthority() {
-        return this.authCertificateAuthority;
-    }
 
-    public void setAuthCertificateAuthority(String authCertificateAuthority) {
-      this.authCertificateAuthority = authCertificateAuthority;
-    }
-    
-    public String getAuthKey() {
-        return this.authKey;
-    }
+  private String accountId;
 
-    public void setAuthKey(String authKey) {
-      this.authKey = authKey;
-    }
-    
-    public AzureConfig getAzureConfig() {
-        return this.azureConfig;
-    }
+  private Amazonec2Config amazonec2Config;
 
-    public void setAzureConfig(AzureConfig azureConfig) {
-      this.azureConfig = azureConfig;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  private String authCertificateAuthority;
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  private String authKey;
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public DigitaloceanConfig getDigitaloceanConfig() {
-        return this.digitaloceanConfig;
-    }
+  private AzureConfig azureConfig;
 
-    public void setDigitaloceanConfig(DigitaloceanConfig digitaloceanConfig) {
-      this.digitaloceanConfig = digitaloceanConfig;
-    }
-    
-    public String getDockerVersion() {
-        return this.dockerVersion;
-    }
+  private String created;
 
-    public void setDockerVersion(String dockerVersion) {
-      this.dockerVersion = dockerVersion;
-    }
-    
-    public String getDriver() {
-        return this.driver;
-    }
+  private String description;
 
-    public void setDriver(String driver) {
-      this.driver = driver;
-    }
-    
-    public Map<String, Object> getEngineEnv() {
-        return this.engineEnv;
-    }
+  private DigitaloceanConfig digitaloceanConfig;
 
-    public void setEngineEnv(Map<String, Object> engineEnv) {
-      this.engineEnv = engineEnv;
-    }
-    
-    public List<String> getEngineInsecureRegistry() {
-        return this.engineInsecureRegistry;
-    }
+  private String dockerVersion;
 
-    public void setEngineInsecureRegistry(List<String> engineInsecureRegistry) {
-      this.engineInsecureRegistry = engineInsecureRegistry;
-    }
-    
-    public String getEngineInstallUrl() {
-        return this.engineInstallUrl;
-    }
+  private String driver;
 
-    public void setEngineInstallUrl(String engineInstallUrl) {
-      this.engineInstallUrl = engineInstallUrl;
-    }
-    
-    public Map<String, Object> getEngineLabel() {
-        return this.engineLabel;
-    }
+  private Map<String, Object> engineEnv;
 
-    public void setEngineLabel(Map<String, Object> engineLabel) {
-      this.engineLabel = engineLabel;
-    }
-    
-    public Map<String, Object> getEngineOpt() {
-        return this.engineOpt;
-    }
+  private List<String> engineInsecureRegistry;
 
-    public void setEngineOpt(Map<String, Object> engineOpt) {
-      this.engineOpt = engineOpt;
-    }
-    
-    public List<String> getEngineRegistryMirror() {
-        return this.engineRegistryMirror;
-    }
+  private String engineInstallUrl;
 
-    public void setEngineRegistryMirror(List<String> engineRegistryMirror) {
-      this.engineRegistryMirror = engineRegistryMirror;
-    }
-    
-    public String getEngineStorageDriver() {
-        return this.engineStorageDriver;
-    }
+  private Map<String, Object> engineLabel;
 
-    public void setEngineStorageDriver(String engineStorageDriver) {
-      this.engineStorageDriver = engineStorageDriver;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  private Map<String, Object> engineOpt;
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private List<String> engineRegistryMirror;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public Map<String, Object> getLabels() {
-        return this.labels;
-    }
+  private String engineStorageDriver;
 
-    public void setLabels(Map<String, Object> labels) {
-      this.labels = labels;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String externalId;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public PacketConfig getPacketConfig() {
-        return this.packetConfig;
-    }
+  private String kind;
 
-    public void setPacketConfig(PacketConfig packetConfig) {
-      this.packetConfig = packetConfig;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private Map<String, Object> labels;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String name;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private PacketConfig packetConfig;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String removed;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String state;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String transitioning;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public Amazonec2Config getAmazonec2Config() {
+    return this.amazonec2Config;
+  }
+
+  public void setAmazonec2Config(Amazonec2Config amazonec2Config) {
+    this.amazonec2Config = amazonec2Config;
+  }
+
+  public String getAuthCertificateAuthority() {
+    return this.authCertificateAuthority;
+  }
+
+  public void setAuthCertificateAuthority(String authCertificateAuthority) {
+    this.authCertificateAuthority = authCertificateAuthority;
+  }
+
+  public String getAuthKey() {
+    return this.authKey;
+  }
+
+  public void setAuthKey(String authKey) {
+    this.authKey = authKey;
+  }
+
+  public AzureConfig getAzureConfig() {
+    return this.azureConfig;
+  }
+
+  public void setAzureConfig(AzureConfig azureConfig) {
+    this.azureConfig = azureConfig;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public DigitaloceanConfig getDigitaloceanConfig() {
+    return this.digitaloceanConfig;
+  }
+
+  public void setDigitaloceanConfig(DigitaloceanConfig digitaloceanConfig) {
+    this.digitaloceanConfig = digitaloceanConfig;
+  }
+
+  public String getDockerVersion() {
+    return this.dockerVersion;
+  }
+
+  public void setDockerVersion(String dockerVersion) {
+    this.dockerVersion = dockerVersion;
+  }
+
+  public String getDriver() {
+    return this.driver;
+  }
+
+  public void setDriver(String driver) {
+    this.driver = driver;
+  }
+
+  public Map<String, Object> getEngineEnv() {
+    return this.engineEnv;
+  }
+
+  public void setEngineEnv(Map<String, Object> engineEnv) {
+    this.engineEnv = engineEnv;
+  }
+
+  public List<String> getEngineInsecureRegistry() {
+    return this.engineInsecureRegistry;
+  }
+
+  public void setEngineInsecureRegistry(List<String> engineInsecureRegistry) {
+    this.engineInsecureRegistry = engineInsecureRegistry;
+  }
+
+  public String getEngineInstallUrl() {
+    return this.engineInstallUrl;
+  }
+
+  public void setEngineInstallUrl(String engineInstallUrl) {
+    this.engineInstallUrl = engineInstallUrl;
+  }
+
+  public Map<String, Object> getEngineLabel() {
+    return this.engineLabel;
+  }
+
+  public void setEngineLabel(Map<String, Object> engineLabel) {
+    this.engineLabel = engineLabel;
+  }
+
+  public Map<String, Object> getEngineOpt() {
+    return this.engineOpt;
+  }
+
+  public void setEngineOpt(Map<String, Object> engineOpt) {
+    this.engineOpt = engineOpt;
+  }
+
+  public List<String> getEngineRegistryMirror() {
+    return this.engineRegistryMirror;
+  }
+
+  public void setEngineRegistryMirror(List<String> engineRegistryMirror) {
+    this.engineRegistryMirror = engineRegistryMirror;
+  }
+
+  public String getEngineStorageDriver() {
+    return this.engineStorageDriver;
+  }
+
+  public void setEngineStorageDriver(String engineStorageDriver) {
+    this.engineStorageDriver = engineStorageDriver;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public Map<String, Object> getLabels() {
+    return this.labels;
+  }
+
+  public void setLabels(Map<String, Object> labels) {
+    this.labels = labels;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public PacketConfig getPacketConfig() {
+    return this.packetConfig;
+  }
+
+  public void setPacketConfig(PacketConfig packetConfig) {
+    this.packetConfig = packetConfig;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

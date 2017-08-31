@@ -1,143 +1,142 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ServiceLog extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getInstanceLink() {
-        return this.links.get("instance");
-    }
-    
-    public String getServiceLink() {
-        return this.links.get("service");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String created;
-    
-    private String description;
-    
-    private String endTime;
-    
-    private String eventType;
-    
-    private String instanceId;
-    
-    private String kind;
-    
-    private String level;
-    
-    private String serviceId;
-    
-    private Boolean subLog;
-    
-    private String transactionId;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getInstanceLink() {
+    return this.links.get("instance");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
+  public String getServiceLink() {
+    return this.links.get("service");
+  }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getEndTime() {
-        return this.endTime;
-    }
 
-    public void setEndTime(String endTime) {
-      this.endTime = endTime;
-    }
-    
-    public String getEventType() {
-        return this.eventType;
-    }
+  private String accountId;
 
-    public void setEventType(String eventType) {
-      this.eventType = eventType;
-    }
-    
-    public String getInstanceId() {
-        return this.instanceId;
-    }
+  private String created;
 
-    public void setInstanceId(String instanceId) {
-      this.instanceId = instanceId;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String description;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getLevel() {
-        return this.level;
-    }
+  private String endTime;
 
-    public void setLevel(String level) {
-      this.level = level;
-    }
-    
-    public String getServiceId() {
-        return this.serviceId;
-    }
+  private String eventType;
 
-    public void setServiceId(String serviceId) {
-      this.serviceId = serviceId;
-    }
-    
-    public Boolean getSubLog() {
-        return this.subLog;
-    }
+  private String instanceId;
 
-    public void setSubLog(Boolean subLog) {
-      this.subLog = subLog;
-    }
-    
-    public String getTransactionId() {
-        return this.transactionId;
-    }
+  private String kind;
 
-    public void setTransactionId(String transactionId) {
-      this.transactionId = transactionId;
-    }
-    
+  private String level;
+
+  private String serviceId;
+
+  private Boolean subLog;
+
+  private String transactionId;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getEndTime() {
+    return this.endTime;
+  }
+
+  public void setEndTime(String endTime) {
+    this.endTime = endTime;
+  }
+
+  public String getEventType() {
+    return this.eventType;
+  }
+
+  public void setEventType(String eventType) {
+    this.eventType = eventType;
+  }
+
+  public String getInstanceId() {
+    return this.instanceId;
+  }
+
+  public void setInstanceId(String instanceId) {
+    this.instanceId = instanceId;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getLevel() {
+    return this.level;
+  }
+
+  public void setLevel(String level) {
+    this.level = level;
+  }
+
+  public String getServiceId() {
+    return this.serviceId;
+  }
+
+  public void setServiceId(String serviceId) {
+    this.serviceId = serviceId;
+  }
+
+  public Boolean getSubLog() {
+    return this.subLog;
+  }
+
+  public void setSubLog(Boolean subLog) {
+    this.subLog = subLog;
+  }
+
+  public String getTransactionId() {
+    return this.transactionId;
+  }
+
+  public void setTransactionId(String transactionId) {
+    this.transactionId = transactionId;
+  }
+
 }

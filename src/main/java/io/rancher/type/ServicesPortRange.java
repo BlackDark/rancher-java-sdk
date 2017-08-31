@@ -1,41 +1,40 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ServicesPortRange extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Integer endPort;
-    
-    private Integer startPort;
-    
-    public Integer getEndPort() {
-        return this.endPort;
-    }
 
-    public void setEndPort(Integer endPort) {
-      this.endPort = endPort;
-    }
-    
-    public Integer getStartPort() {
-        return this.startPort;
-    }
+  private Long endPort;
 
-    public void setStartPort(Integer startPort) {
-      this.startPort = startPort;
-    }
-    
+  private Long startPort;
+
+  public Long getEndPort() {
+    return this.endPort;
+  }
+
+  public void setEndPort(Long endPort) {
+    this.endPort = endPort;
+  }
+
+  public Long getStartPort() {
+    return this.startPort;
+  }
+
+  public void setStartPort(Long startPort) {
+    this.startPort = startPort;
+  }
+
 }

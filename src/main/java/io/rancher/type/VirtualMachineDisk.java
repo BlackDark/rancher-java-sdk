@@ -1,92 +1,90 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
 import java.util.Map;
 
 public class VirtualMachineDisk extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String driver;
-    
-    private String name;
-    
-    private Map<String, Object> opts;
-    
-    private Integer readIops;
-    
-    private Boolean root;
-    
-    private String size;
-    
-    private Integer writeIops;
-    
-    public String getDriver() {
-        return this.driver;
-    }
 
-    public void setDriver(String driver) {
-      this.driver = driver;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String driver;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public Map<String, Object> getOpts() {
-        return this.opts;
-    }
+  private String name;
 
-    public void setOpts(Map<String, Object> opts) {
-      this.opts = opts;
-    }
-    
-    public Integer getReadIops() {
-        return this.readIops;
-    }
+  private Map<String, Object> opts;
 
-    public void setReadIops(Integer readIops) {
-      this.readIops = readIops;
-    }
-    
-    public Boolean getRoot() {
-        return this.root;
-    }
+  private Long readIops;
 
-    public void setRoot(Boolean root) {
-      this.root = root;
-    }
-    
-    public String getSize() {
-        return this.size;
-    }
+  private Boolean root;
 
-    public void setSize(String size) {
-      this.size = size;
-    }
-    
-    public Integer getWriteIops() {
-        return this.writeIops;
-    }
+  private String size;
 
-    public void setWriteIops(Integer writeIops) {
-      this.writeIops = writeIops;
-    }
-    
+  private Long writeIops;
+
+  public String getDriver() {
+    return this.driver;
+  }
+
+  public void setDriver(String driver) {
+    this.driver = driver;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public Map<String, Object> getOpts() {
+    return this.opts;
+  }
+
+  public void setOpts(Map<String, Object> opts) {
+    this.opts = opts;
+  }
+
+  public Long getReadIops() {
+    return this.readIops;
+  }
+
+  public void setReadIops(Long readIops) {
+    this.readIops = readIops;
+  }
+
+  public Boolean getRoot() {
+    return this.root;
+  }
+
+  public void setRoot(Boolean root) {
+    this.root = root;
+  }
+
+  public String getSize() {
+    return this.size;
+  }
+
+  public void setSize(String size) {
+    this.size = size;
+  }
+
+  public Long getWriteIops() {
+    return this.writeIops;
+  }
+
+  public void setWriteIops(Long writeIops) {
+    this.writeIops = writeIops;
+  }
+
 }

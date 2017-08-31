@@ -2,21 +2,13 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.Subnet;
 import io.rancher.type.Account;
 import io.rancher.type.IpAddress;
 import io.rancher.type.Network;
-
-import retrofit2.Call;
+import io.rancher.type.Subnet;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface SubnetService {
 
@@ -54,14 +46,13 @@ public interface SubnetService {
   Call<Subnet> restore(@Path("id") String id);
 
 
+  @GET
+  Call<Account> getLinkAccount(@Url String url);
 
   @GET
-  Call<Account> getLinkAccount(@Url String url );
+  Call<TypeCollection<IpAddress>> getLinkIpAddresses(@Url String url);
 
   @GET
-  Call<TypeCollection<IpAddress>> getLinkIpAddresses(@Url String url );
-
-  @GET
-  Call<Network> getLinkNetwork(@Url String url );
+  Call<Network> getLinkNetwork(@Url String url);
 
 }

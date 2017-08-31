@@ -1,71 +1,70 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ToServiceUpgradeStrategy extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Integer batchSize;
-    
-    private Integer finalScale;
-    
-    private Integer intervalMillis;
-    
-    private String toServiceId;
-    
-    private Boolean updateLinks;
-    
-    public Integer getBatchSize() {
-        return this.batchSize;
-    }
 
-    public void setBatchSize(Integer batchSize) {
-      this.batchSize = batchSize;
-    }
-    
-    public Integer getFinalScale() {
-        return this.finalScale;
-    }
+  private Long batchSize;
 
-    public void setFinalScale(Integer finalScale) {
-      this.finalScale = finalScale;
-    }
-    
-    public Integer getIntervalMillis() {
-        return this.intervalMillis;
-    }
+  private Long finalScale;
 
-    public void setIntervalMillis(Integer intervalMillis) {
-      this.intervalMillis = intervalMillis;
-    }
-    
-    public String getToServiceId() {
-        return this.toServiceId;
-    }
+  private Long intervalMillis;
 
-    public void setToServiceId(String toServiceId) {
-      this.toServiceId = toServiceId;
-    }
-    
-    public Boolean getUpdateLinks() {
-        return this.updateLinks;
-    }
+  private String toServiceId;
 
-    public void setUpdateLinks(Boolean updateLinks) {
-      this.updateLinks = updateLinks;
-    }
-    
+  private Boolean updateLinks;
+
+  public Long getBatchSize() {
+    return this.batchSize;
+  }
+
+  public void setBatchSize(Long batchSize) {
+    this.batchSize = batchSize;
+  }
+
+  public Long getFinalScale() {
+    return this.finalScale;
+  }
+
+  public void setFinalScale(Long finalScale) {
+    this.finalScale = finalScale;
+  }
+
+  public Long getIntervalMillis() {
+    return this.intervalMillis;
+  }
+
+  public void setIntervalMillis(Long intervalMillis) {
+    this.intervalMillis = intervalMillis;
+  }
+
+  public String getToServiceId() {
+    return this.toServiceId;
+  }
+
+  public void setToServiceId(String toServiceId) {
+    this.toServiceId = toServiceId;
+  }
+
+  public Boolean getUpdateLinks() {
+    return this.updateLinks;
+  }
+
+  public void setUpdateLinks(Boolean updateLinks) {
+    this.updateLinks = updateLinks;
+  }
+
 }

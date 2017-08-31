@@ -1,183 +1,182 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class RegistrationToken extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getAccountLink() {
-        return this.links.get("account");
-    }
-    
-    public String getImagesLink() {
-        return this.links.get("images");
-    }
-    
-    public String getInstancesLink() {
-        return this.links.get("instances");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String accountId;
-    
-    private String command;
-    
-    private String created;
-    
-    private String description;
-    
-    private String image;
-    
-    private String kind;
-    
-    private String name;
-    
-    private String registrationUrl;
-    
-    private String removed;
-    
-    private String state;
-    
-    private String token;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getAccountId() {
-        return this.accountId;
-    }
+  public String getAccountLink() {
+    return this.links.get("account");
+  }
 
-    public void setAccountId(String accountId) {
-      this.accountId = accountId;
-    }
-    
-    public String getCommand() {
-        return this.command;
-    }
+  public String getImagesLink() {
+    return this.links.get("images");
+  }
 
-    public void setCommand(String command) {
-      this.command = command;
-    }
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getInstancesLink() {
+    return this.links.get("instances");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getImage() {
-        return this.image;
-    }
+  private String accountId;
 
-    public void setImage(String image) {
-      this.image = image;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String command;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String created;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getRegistrationUrl() {
-        return this.registrationUrl;
-    }
+  private String description;
 
-    public void setRegistrationUrl(String registrationUrl) {
-      this.registrationUrl = registrationUrl;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String image;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String kind;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getToken() {
-        return this.token;
-    }
+  private String name;
 
-    public void setToken(String token) {
-      this.token = token;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String registrationUrl;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String removed;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String state;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String token;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private String transitioning;
+
+  private String transitioningMessage;
+
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getAccountId() {
+    return this.accountId;
+  }
+
+  public void setAccountId(String accountId) {
+    this.accountId = accountId;
+  }
+
+  public String getCommand() {
+    return this.command;
+  }
+
+  public void setCommand(String command) {
+    this.command = command;
+  }
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getImage() {
+    return this.image;
+  }
+
+  public void setImage(String image) {
+    this.image = image;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getRegistrationUrl() {
+    return this.registrationUrl;
+  }
+
+  public void setRegistrationUrl(String registrationUrl) {
+    this.registrationUrl = registrationUrl;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getToken() {
+    return this.token;
+  }
+
+  public void setToken(String token) {
+    this.token = token;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

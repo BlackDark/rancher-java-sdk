@@ -1,81 +1,80 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class PacketConfig extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String apiKey;
-    
-    private String billingCycle;
-    
-    private String facilityCode;
-    
-    private String os;
-    
-    private String plan;
-    
-    private String projectId;
-    
-    public String getApiKey() {
-        return this.apiKey;
-    }
 
-    public void setApiKey(String apiKey) {
-      this.apiKey = apiKey;
-    }
-    
-    public String getBillingCycle() {
-        return this.billingCycle;
-    }
+  private String apiKey;
 
-    public void setBillingCycle(String billingCycle) {
-      this.billingCycle = billingCycle;
-    }
-    
-    public String getFacilityCode() {
-        return this.facilityCode;
-    }
+  private String billingCycle;
 
-    public void setFacilityCode(String facilityCode) {
-      this.facilityCode = facilityCode;
-    }
-    
-    public String getOs() {
-        return this.os;
-    }
+  private String facilityCode;
 
-    public void setOs(String os) {
-      this.os = os;
-    }
-    
-    public String getPlan() {
-        return this.plan;
-    }
+  private String os;
 
-    public void setPlan(String plan) {
-      this.plan = plan;
-    }
-    
-    public String getProjectId() {
-        return this.projectId;
-    }
+  private String plan;
 
-    public void setProjectId(String projectId) {
-      this.projectId = projectId;
-    }
-    
+  private String projectId;
+
+  public String getApiKey() {
+    return this.apiKey;
+  }
+
+  public void setApiKey(String apiKey) {
+    this.apiKey = apiKey;
+  }
+
+  public String getBillingCycle() {
+    return this.billingCycle;
+  }
+
+  public void setBillingCycle(String billingCycle) {
+    this.billingCycle = billingCycle;
+  }
+
+  public String getFacilityCode() {
+    return this.facilityCode;
+  }
+
+  public void setFacilityCode(String facilityCode) {
+    this.facilityCode = facilityCode;
+  }
+
+  public String getOs() {
+    return this.os;
+  }
+
+  public void setOs(String os) {
+    this.os = os;
+  }
+
+  public String getPlan() {
+    return this.plan;
+  }
+
+  public void setPlan(String plan) {
+    this.plan = plan;
+  }
+
+  public String getProjectId() {
+    return this.projectId;
+  }
+
+  public void setProjectId(String projectId) {
+    this.projectId = projectId;
+  }
+
 }

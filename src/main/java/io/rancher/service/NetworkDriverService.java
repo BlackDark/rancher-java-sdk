@@ -2,21 +2,13 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.NetworkDriver;
 import io.rancher.type.Account;
 import io.rancher.type.Network;
+import io.rancher.type.NetworkDriver;
 import io.rancher.type.Service;
-
-import retrofit2.Call;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface NetworkDriverService {
 
@@ -37,25 +29,24 @@ public interface NetworkDriverService {
 
   @DELETE("networkDriver/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("networkDriver/{id}?action=activate")
   Call<NetworkDriver> activate(@Path("id") String id);
-  
+
   @POST("networkDriver/{id}?action=deactivate")
   Call<NetworkDriver> deactivate(@Path("id") String id);
-  
+
   @POST("networkDriver/{id}?action=remove")
   Call<NetworkDriver> remove(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<Network>> getLinkNetworks(@Url String url );
-  
+  Call<TypeCollection<Network>> getLinkNetworks(@Url String url);
+
   @GET
-  Call<Service> getLinkService(@Url String url );
-  
+  Call<Service> getLinkService(@Url String url);
+
 }

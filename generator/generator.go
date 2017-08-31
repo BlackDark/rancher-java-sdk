@@ -118,9 +118,9 @@ func getTypeMap(schema client.Schema) (map[string]string, metadata) {
 			case "array[string]":
 				result[fieldName] = "List<String>"
 			case "array[int]":
-				result[fieldName] = "List<Integer>"
+				result[fieldName] = "List<Long>"
 			case "array[float64]":
-				result[fieldName] = "List<Float>"
+				result[fieldName] = "List<Double>"
 			case "array[json]":
 				result[fieldName] = "List<Map<String, Object>>"
 			default:
@@ -140,9 +140,9 @@ func getTypeMap(schema client.Schema) (map[string]string, metadata) {
 		} else if strings.HasPrefix(field.Type, "extensionPoint") {
 			result[fieldName] = "Object"
 		} else if strings.HasPrefix(field.Type, "float") {
-			result[fieldName] = "Float"
+			result[fieldName] = "Double"
 		} else if strings.HasPrefix(field.Type, "int") {
-			result[fieldName] = "Integer"
+			result[fieldName] = "Long"
 		} else {
 			result[fieldName] = capitalize(field.Type)
 		}

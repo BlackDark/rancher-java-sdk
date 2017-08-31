@@ -1,51 +1,50 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ScalePolicy extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private Integer increment;
-    
-    private Integer max;
-    
-    private Integer min;
-    
-    public Integer getIncrement() {
-        return this.increment;
-    }
 
-    public void setIncrement(Integer increment) {
-      this.increment = increment;
-    }
-    
-    public Integer getMax() {
-        return this.max;
-    }
+  private Long increment;
 
-    public void setMax(Integer max) {
-      this.max = max;
-    }
-    
-    public Integer getMin() {
-        return this.min;
-    }
+  private Long max;
 
-    public void setMin(Integer min) {
-      this.min = min;
-    }
-    
+  private Long min;
+
+  public Long getIncrement() {
+    return this.increment;
+  }
+
+  public void setIncrement(Long increment) {
+    this.increment = increment;
+  }
+
+  public Long getMax() {
+    return this.max;
+  }
+
+  public void setMax(Long max) {
+    this.max = max;
+  }
+
+  public Long getMin() {
+    return this.min;
+  }
+
+  public void setMin(Long min) {
+    this.min = min;
+  }
+
 }

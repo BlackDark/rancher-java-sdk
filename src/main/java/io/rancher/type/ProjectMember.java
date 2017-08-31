@@ -1,165 +1,164 @@
 package io.rancher.type;
 
-import java.util.Map;
-
 import io.rancher.base.AbstractType;
+
+import java.util.Map;
 
 public class ProjectMember extends AbstractType {
 
-    private Map<String, String> links;
+  private Map<String, String> links;
 
-    public Map<String, String> getLinks() {
-        return links;
-    }
+  public Map<String, String> getLinks() {
+    return links;
+  }
 
-    public void setLinks(Map<String, String> links) {
-        this.links = links;
-    }
-    
-    public String getProjectLink() {
-        return this.links.get("project");
-    }
-    
+  public void setLinks(Map<String, String> links) {
+    this.links = links;
+  }
 
-    
-    private String created;
-    
-    private String description;
-    
-    private String externalId;
-    
-    private String externalIdType;
-    
-    private String kind;
-    
-    private String name;
-    
-    private String projectId;
-    
-    private String removed;
-    
-    private String role;
-    
-    private String state;
-    
-    private String transitioning;
-    
-    private String transitioningMessage;
-    
-    private Integer transitioningProgress;
-    
-    private String uuid;
-    
-    public String getCreated() {
-        return this.created;
-    }
+  public String getProjectLink() {
+    return this.links.get("project");
+  }
 
-    public void setCreated(String created) {
-      this.created = created;
-    }
-    
-    public String getDescription() {
-        return this.description;
-    }
 
-    public void setDescription(String description) {
-      this.description = description;
-    }
-    
-    public String getExternalId() {
-        return this.externalId;
-    }
+  private String created;
 
-    public void setExternalId(String externalId) {
-      this.externalId = externalId;
-    }
-    
-    public String getExternalIdType() {
-        return this.externalIdType;
-    }
+  private String description;
 
-    public void setExternalIdType(String externalIdType) {
-      this.externalIdType = externalIdType;
-    }
-    
-    public String getKind() {
-        return this.kind;
-    }
+  private String externalId;
 
-    public void setKind(String kind) {
-      this.kind = kind;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
+  private String externalIdType;
 
-    public void setName(String name) {
-      this.name = name;
-    }
-    
-    public String getProjectId() {
-        return this.projectId;
-    }
+  private String kind;
 
-    public void setProjectId(String projectId) {
-      this.projectId = projectId;
-    }
-    
-    public String getRemoved() {
-        return this.removed;
-    }
+  private String name;
 
-    public void setRemoved(String removed) {
-      this.removed = removed;
-    }
-    
-    public String getRole() {
-        return this.role;
-    }
+  private String projectId;
 
-    public void setRole(String role) {
-      this.role = role;
-    }
-    
-    public String getState() {
-        return this.state;
-    }
+  private String removed;
 
-    public void setState(String state) {
-      this.state = state;
-    }
-    
-    public String getTransitioning() {
-        return this.transitioning;
-    }
+  private String role;
 
-    public void setTransitioning(String transitioning) {
-      this.transitioning = transitioning;
-    }
-    
-    public String getTransitioningMessage() {
-        return this.transitioningMessage;
-    }
+  private String state;
 
-    public void setTransitioningMessage(String transitioningMessage) {
-      this.transitioningMessage = transitioningMessage;
-    }
-    
-    public Integer getTransitioningProgress() {
-        return this.transitioningProgress;
-    }
+  private String transitioning;
 
-    public void setTransitioningProgress(Integer transitioningProgress) {
-      this.transitioningProgress = transitioningProgress;
-    }
-    
-    public String getUuid() {
-        return this.uuid;
-    }
+  private String transitioningMessage;
 
-    public void setUuid(String uuid) {
-      this.uuid = uuid;
-    }
-    
+  private Long transitioningProgress;
+
+  private String uuid;
+
+  public String getCreated() {
+    return this.created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getExternalId() {
+    return this.externalId;
+  }
+
+  public void setExternalId(String externalId) {
+    this.externalId = externalId;
+  }
+
+  public String getExternalIdType() {
+    return this.externalIdType;
+  }
+
+  public void setExternalIdType(String externalIdType) {
+    this.externalIdType = externalIdType;
+  }
+
+  public String getKind() {
+    return this.kind;
+  }
+
+  public void setKind(String kind) {
+    this.kind = kind;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getProjectId() {
+    return this.projectId;
+  }
+
+  public void setProjectId(String projectId) {
+    this.projectId = projectId;
+  }
+
+  public String getRemoved() {
+    return this.removed;
+  }
+
+  public void setRemoved(String removed) {
+    this.removed = removed;
+  }
+
+  public String getRole() {
+    return this.role;
+  }
+
+  public void setRole(String role) {
+    this.role = role;
+  }
+
+  public String getState() {
+    return this.state;
+  }
+
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  public String getTransitioning() {
+    return this.transitioning;
+  }
+
+  public void setTransitioning(String transitioning) {
+    this.transitioning = transitioning;
+  }
+
+  public String getTransitioningMessage() {
+    return this.transitioningMessage;
+  }
+
+  public void setTransitioningMessage(String transitioningMessage) {
+    this.transitioningMessage = transitioningMessage;
+  }
+
+  public Long getTransitioningProgress() {
+    return this.transitioningProgress;
+  }
+
+  public void setTransitioningProgress(Long transitioningProgress) {
+    this.transitioningProgress = transitioningProgress;
+  }
+
+  public String getUuid() {
+    return this.uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
 }

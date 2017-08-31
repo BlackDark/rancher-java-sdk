@@ -2,19 +2,11 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.ProjectMember;
 import io.rancher.type.Project;
-
-import retrofit2.Call;
+import io.rancher.type.ProjectMember;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface ProjectMemberService {
 
@@ -35,25 +27,24 @@ public interface ProjectMemberService {
 
   @DELETE("projectMember/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("projectMember/{id}?action=activate")
   Call<ProjectMember> activate(@Path("id") String id);
-  
+
   @POST("projectMember/{id}?action=deactivate")
   Call<ProjectMember> deactivate(@Path("id") String id);
-  
+
   @POST("projectMember/{id}?action=purge")
   Call<ProjectMember> purge(@Path("id") String id);
-  
+
   @POST("projectMember/{id}?action=remove")
   Call<ProjectMember> remove(@Path("id") String id);
-  
+
   @POST("projectMember/{id}?action=restore")
   Call<ProjectMember> restore(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Project> getLinkProject(@Url String url );
-  
+  Call<Project> getLinkProject(@Url String url);
+
 }

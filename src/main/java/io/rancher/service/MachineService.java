@@ -2,21 +2,13 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.Machine;
 import io.rancher.type.Account;
 import io.rancher.type.Host;
+import io.rancher.type.Machine;
 import io.rancher.type.PhysicalHost;
-
-import retrofit2.Call;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface MachineService {
 
@@ -37,22 +29,21 @@ public interface MachineService {
 
   @DELETE("machine/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("machine/{id}?action=bootstrap")
   Call<PhysicalHost> bootstrap(@Path("id") String id);
-  
+
   @POST("machine/{id}?action=error")
   Call<PhysicalHost> error(@Path("id") String id);
-  
+
   @POST("machine/{id}?action=remove")
   Call<PhysicalHost> remove(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<Host>> getLinkHosts(@Url String url );
-  
+  Call<TypeCollection<Host>> getLinkHosts(@Url String url);
+
 }

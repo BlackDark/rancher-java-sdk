@@ -2,22 +2,10 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.RegistrationToken;
-import io.rancher.type.Account;
-import io.rancher.type.Credential;
-import io.rancher.type.Image;
-import io.rancher.type.Instance;
-
-import retrofit2.Call;
+import io.rancher.type.*;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface RegistrationTokenService {
 
@@ -38,28 +26,27 @@ public interface RegistrationTokenService {
 
   @DELETE("registrationToken/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("registrationToken/{id}?action=activate")
   Call<Credential> activate(@Path("id") String id);
-  
+
   @POST("registrationToken/{id}?action=deactivate")
   Call<Credential> deactivate(@Path("id") String id);
-  
+
   @POST("registrationToken/{id}?action=purge")
   Call<Credential> purge(@Path("id") String id);
-  
+
   @POST("registrationToken/{id}?action=remove")
   Call<Credential> remove(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<Image>> getLinkImages(@Url String url );
-  
+  Call<TypeCollection<Image>> getLinkImages(@Url String url);
+
   @GET
-  Call<TypeCollection<Instance>> getLinkInstances(@Url String url );
-  
+  Call<TypeCollection<Instance>> getLinkInstances(@Url String url);
+
 }

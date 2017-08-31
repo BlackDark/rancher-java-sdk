@@ -2,21 +2,13 @@ package io.rancher.service;
 
 import io.rancher.base.Filters;
 import io.rancher.base.TypeCollection;
-import io.rancher.type.IpAddress;
 import io.rancher.type.Account;
 import io.rancher.type.Host;
+import io.rancher.type.IpAddress;
 import io.rancher.type.Network;
-
-import retrofit2.Call;
 import okhttp3.ResponseBody;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
-import retrofit2.http.QueryMap;
-import retrofit2.http.Url;
+import retrofit2.Call;
+import retrofit2.http.*;
 
 public interface IpAddressService {
 
@@ -37,37 +29,36 @@ public interface IpAddressService {
 
   @DELETE("ipAddress/{id}")
   Call<ResponseBody> delete(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=activate")
   Call<IpAddress> activate(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=associate")
   Call<IpAddress> associate(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=deactivate")
   Call<IpAddress> deactivate(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=disassociate")
   Call<IpAddress> disassociate(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=purge")
   Call<IpAddress> purge(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=remove")
   Call<IpAddress> remove(@Path("id") String id);
-  
+
   @POST("ipAddress/{id}?action=restore")
   Call<IpAddress> restore(@Path("id") String id);
-  
 
-  
+
   @GET
-  Call<Account> getLinkAccount(@Url String url );
-  
+  Call<Account> getLinkAccount(@Url String url);
+
   @GET
-  Call<TypeCollection<Host>> getLinkHosts(@Url String url );
-  
+  Call<TypeCollection<Host>> getLinkHosts(@Url String url);
+
   @GET
-  Call<Network> getLinkNetwork(@Url String url );
-  
+  Call<Network> getLinkNetwork(@Url String url);
+
 }
